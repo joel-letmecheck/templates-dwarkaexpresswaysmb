@@ -77,7 +77,7 @@ footer p{margin:0 0 8px;overflow-wrap:anywhere}
 <body>
 <header class="top"><div class="wrap">
   <span class="brand">Shree Properties &amp; Consultants</span>
-  <a class="btn wa sm" href="https://wa.me/919811621437?text=Hi%20Shree%20Properties%20%26%20Consultants%2C%20I%20found%20your%20page%20and%20would%20like%20to%20enquire%20about%20a%20property." rel="noopener">WhatsApp us</a>
+  <a class="btn wa sm" href="#night" data-demo>WhatsApp us</a>
 </div></header>
 
 <main>
@@ -90,10 +90,21 @@ footer p{margin:0 0 8px;overflow-wrap:anywhere}
     <li>RERA registered</li><li>25+ years of insight</li>
   </ul>
   <div class="cta">
-    <a class="btn wa" href="https://wa.me/919811621437?text=Hi%20Shree%20Properties%20%26%20Consultants%2C%20I%20found%20your%20page%20and%20would%20like%20to%20enquire%20about%20a%20property." rel="noopener">Enquire on WhatsApp</a>
+    <a class="btn wa" href="#night" data-demo>Enquire on WhatsApp</a>
     <a class="btn" href="#enquiry">Send a quick enquiry</a>
   </div>
 </div></div>
+
+<section class="alt" id="night"><div class="wrap">
+  <h2>Enquiries answered instantly, even at night</h2>
+  <p class="sub">Buyers often enquire in the evening and contact several brokers at once. This demo shows how an automatic WhatsApp reply could answer an enquiry for Shree Properties &amp; Consultants at 11:40pm.</p>
+  <div class="chat" id="chat">
+    <div class="chat-h"><span>Shree Properties &amp; Consultants enquiry assistant</span><span class="badge">Demo</span></div>
+    <div class="log" id="log" aria-live="polite" aria-label="Simulated WhatsApp conversation"></div>
+    <div class="chat-f"><span>Simulated and scripted. Nothing is sent and no visit is booked.</span><button class="btn sm" id="play" type="button">Play demo</button></div>
+  </div>
+  <script type="application/json" id="demo-script">[{"who": "sys", "text": "Demo: it is 11:40 pm. The office is closed."}, {"who": "user", "text": "Hi, I am looking for a 3BHK on Dwarka Expressway, budget 2.5 crore.", "time": "11:40 pm"}, {"who": "bot", "text": "Thanks for your enquiry with Shree Properties \u0026 Consultants (demo). Is this for self-use or investment, and when would you like to visit?", "time": "11:40 pm"}, {"who": "user", "text": "Self-use, this Saturday", "time": "11:41 pm"}, {"who": "bot", "text": "Great. I can book a site visit for Saturday at 11:00 AM or 4:00 PM. Which suits you? An advisor will confirm in the morning.", "time": "11:41 pm"}, {"who": "sys", "text": "The advisor gets an alert and the lead is logged with timestamps. Example only."}]</script>
+</div></section>
 
 <section id="projects"><div class="wrap">
   <h2>What we advise on</h2>
@@ -133,16 +144,6 @@ footer p{margin:0 0 8px;overflow-wrap:anywhere}
   </div>
 </div></section>
 
-<section class="alt" id="night"><div class="wrap">
-  <h2>Enquiries answered instantly, even at night</h2>
-  <p class="sub">Buyers often enquire in the evening and contact several brokers at once. This demo shows how an automatic WhatsApp reply could answer an enquiry for Shree Properties &amp; Consultants at 11:40pm.</p>
-  <div class="chat" id="chat">
-    <div class="chat-h"><span>Shree Properties &amp; Consultants enquiry assistant</span><span class="badge">Demo</span></div>
-    <div class="log" id="log" aria-live="polite" aria-label="Simulated WhatsApp conversation"></div>
-    <div class="chat-f"><span>Simulated and scripted. Nothing is sent and no visit is booked.</span><button class="btn sm" id="play" type="button">Play demo</button></div>
-  </div>
-  <script type="application/json" id="demo-script">[{"who": "sys", "text": "Demo: it is 11:40 pm. The office is closed."}, {"who": "user", "text": "Hi, I am looking for a 3BHK on Dwarka Expressway, budget 2.5 crore.", "time": "11:40 pm"}, {"who": "bot", "text": "Thanks for your enquiry with Shree Properties \u0026 Consultants (demo). Is this for self-use or investment, and when would you like to visit?", "time": "11:40 pm"}, {"who": "user", "text": "Self-use, this Saturday", "time": "11:41 pm"}, {"who": "bot", "text": "Great. I can book a site visit for Saturday at 11:00 AM or 4:00 PM. Which suits you? An advisor will confirm in the morning.", "time": "11:41 pm"}, {"who": "sys", "text": "The advisor gets an alert and the lead is logged with timestamps. Example only."}]</script>
-</div></section>
 </main>
 
 <footer><div class="wrap">
@@ -151,7 +152,7 @@ footer p{margin:0 0 8px;overflow-wrap:anywhere}
   <p>Details taken from public listings: <a href="https://www.shreepnc.com/" rel="noopener">https://www.shreepnc.com/</a></p>
 </div></footer>
 
-<div class="bar"><a class="btn wa" href="https://wa.me/919811621437?text=Hi%20Shree%20Properties%20%26%20Consultants%2C%20I%20found%20your%20page%20and%20would%20like%20to%20enquire%20about%20a%20property." rel="noopener">Enquire on WhatsApp</a></div>
+<div class="bar"><a class="btn wa" href="#night" data-demo>Enquire on WhatsApp</a></div>
 
 <script>
 (function(){
@@ -186,6 +187,18 @@ footer p{margin:0 0 8px;overflow-wrap:anywhere}
   if('IntersectionObserver' in window){
     new IntersectionObserver(function(e,o){if(e[0].isIntersecting&&!started){play();o.disconnect();}},{threshold:.4}).observe(document.getElementById('chat'));
   }
+})();
+</script>
+<script>
+(function(){
+  document.querySelectorAll('a[data-demo]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      var c=document.getElementById('chat'),b=document.getElementById('play');
+      if(c)c.scrollIntoView({behavior:'smooth',block:'center'});
+      if(b&&!b.disabled)setTimeout(function(){b.click();},350);
+    });
+  });
 })();
 </script>
 </body>

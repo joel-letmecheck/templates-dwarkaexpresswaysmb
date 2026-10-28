@@ -86,7 +86,7 @@ footer p{margin:0 0 8px;overflow-wrap:anywhere}
 <body>
 <header class="top"><div class="wrap">
   <span class="brand">Four Fathers Brewing Co.</span>
-  <a class="btn wa sm" href="https://wa.me/918375050507?text=Hi%20Four%20Fathers%20Brewing%20Co.%2C%20I%20would%20like%20to%20book%20a%20table.%0AParty%20size%3A%20%0ADate%20and%20time%3A%20%0AName%3A%20" rel="noopener">Book on WhatsApp</a>
+  <a class="btn wa sm" href="#night" data-demo>Book on WhatsApp</a>
 </div></header>
 
 <main>
@@ -99,10 +99,21 @@ footer p{margin:0 0 8px;overflow-wrap:anywhere}
     <li>Open daily until 1:00 AM</li>
   </ul>
   <div class="cta">
-    <a class="btn wa" href="https://wa.me/918375050507?text=Hi%20Four%20Fathers%20Brewing%20Co.%2C%20I%20would%20like%20to%20book%20a%20table.%0AParty%20size%3A%20%0ADate%20and%20time%3A%20%0AName%3A%20" rel="noopener">Book a table on WhatsApp</a>
+    <a class="btn wa" href="#night" data-demo>Book a table on WhatsApp</a>
     <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Four+Fathers+Brewing+Co.+3rd+Floor%2C+SVH+83+Metro+Street%2C+Sector+83%2C+Gurugram%2C+Haryana+122012" rel="noopener">Get directions</a>
   </div>
 </div></div>
+
+<section id="night"><div class="wrap">
+  <h2>Night booking, answered instantly</h2>
+  <p class="sub">Guests often remember to book late at night. This demo shows how an automatic WhatsApp reply could answer a party enquiry at 1am for Four Fathers Brewing Co..</p>
+  <div class="chat" id="chat">
+    <div class="chat-h"><span>Four Fathers Brewing Co. booking assistant</span><span class="badge">Demo</span></div>
+    <div class="log" id="log" aria-live="polite" aria-label="Simulated WhatsApp conversation"></div>
+    <div class="chat-f"><span>Simulated and scripted. Nothing is sent and no booking is made.</span><button class="btn sm" id="play" type="button">Play demo</button></div>
+  </div>
+  <script type="application/json" id="demo-script">[{"who": "sys", "text": "Demo: it is 1:02 am. The restaurant is closed and the team is asleep."}, {"who": "user", "text": "Hi, table for 10 tomorrow 8pm? It is a birthday.", "time": "1:02 am"}, {"who": "bot", "text": "Hi, this is the Four Fathers Brewing Co. booking assistant (demo). For 10 guests tomorrow at 8:00 PM, may I have a name for the booking?", "time": "1:02 am"}, {"who": "user", "text": "Rohan", "time": "1:02 am"}, {"who": "bot", "text": "Thanks Rohan. Your table for 10 is held for tomorrow at 8:00 PM. The manager will confirm any special setup in the morning. Reply CHANGE to adjust or CANCEL to release it.", "time": "1:03 am"}, {"who": "sys", "text": "The manager gets an alert and the booking is waiting at breakfast time. Example only."}]</script>
+</div></section>
 
 <section id="highlights"><div class="wrap">
   <h2>Highlights</h2>
@@ -140,16 +151,6 @@ footer p{margin:0 0 8px;overflow-wrap:anywhere}
   </div>
 </div></section>
 
-<section id="night"><div class="wrap">
-  <h2>Night booking, answered instantly</h2>
-  <p class="sub">Guests often remember to book late at night. This demo shows how an automatic WhatsApp reply could answer a party enquiry at 1am for Four Fathers Brewing Co..</p>
-  <div class="chat" id="chat">
-    <div class="chat-h"><span>Four Fathers Brewing Co. booking assistant</span><span class="badge">Demo</span></div>
-    <div class="log" id="log" aria-live="polite" aria-label="Simulated WhatsApp conversation"></div>
-    <div class="chat-f"><span>Simulated and scripted. Nothing is sent and no booking is made.</span><button class="btn sm" id="play" type="button">Play demo</button></div>
-  </div>
-  <script type="application/json" id="demo-script">[{"who": "sys", "text": "Demo: it is 1:02 am. The restaurant is closed and the team is asleep."}, {"who": "user", "text": "Hi, table for 10 tomorrow 8pm? It is a birthday.", "time": "1:02 am"}, {"who": "bot", "text": "Hi, this is the Four Fathers Brewing Co. booking assistant (demo). For 10 guests tomorrow at 8:00 PM, may I have a name for the booking?", "time": "1:02 am"}, {"who": "user", "text": "Rohan", "time": "1:02 am"}, {"who": "bot", "text": "Thanks Rohan. Your table for 10 is held for tomorrow at 8:00 PM. The manager will confirm any special setup in the morning. Reply CHANGE to adjust or CANCEL to release it.", "time": "1:03 am"}, {"who": "sys", "text": "The manager gets an alert and the booking is waiting at breakfast time. Example only."}]</script>
-</div></section>
 </main>
 
 <footer><div class="wrap">
@@ -158,7 +159,7 @@ footer p{margin:0 0 8px;overflow-wrap:anywhere}
   <p>Details taken from public listings: <a href="https://www.swiggy.com/restaurants/gurgaon/sector-84/four-fathers-brewing-co-1392029/dineout" rel="noopener">https://www.swiggy.com/restaurants/gurgaon/sector-84/four-fathers-brewing-co-1392029/dineout</a></p>
 </div></footer>
 
-<div class="bar"><a class="btn wa" href="https://wa.me/918375050507?text=Hi%20Four%20Fathers%20Brewing%20Co.%2C%20I%20would%20like%20to%20book%20a%20table.%0AParty%20size%3A%20%0ADate%20and%20time%3A%20%0AName%3A%20" rel="noopener">Book a table on WhatsApp</a></div>
+<div class="bar"><a class="btn wa" href="#night" data-demo>Book a table on WhatsApp</a></div>
 
 <script>
 (function(){
@@ -184,6 +185,18 @@ footer p{margin:0 0 8px;overflow-wrap:anywhere}
   if('IntersectionObserver' in window){
     new IntersectionObserver(function(e,o){if(e[0].isIntersecting&&!started){play();o.disconnect();}},{threshold:.4}).observe(document.getElementById('chat'));
   }
+})();
+</script>
+<script>
+(function(){
+  document.querySelectorAll('a[data-demo]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      var c=document.getElementById('chat'),b=document.getElementById('play');
+      if(c)c.scrollIntoView({behavior:'smooth',block:'center'});
+      if(b&&!b.disabled)setTimeout(function(){b.click();},350);
+    });
+  });
 })();
 </script>
 </body>
