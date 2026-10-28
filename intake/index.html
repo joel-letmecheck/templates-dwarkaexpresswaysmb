@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Client intake · WhatsApp AI automation</title>
+<meta name="theme-color" content="#fbf4e8">
+<style>
+:root{
+  --bg:#fbf4e8;--bg2:#eef2de;--card:#fffaf0;--fg:#2b2118;--muted:#5d5144;
+  --line:rgba(43,33,24,.14);--line-strong:rgba(43,33,24,.3);
+  --accent:#2f4a35;--on-accent:#fbf4e8;--terra:#b34d27;--butter:#f5d98b;--ring:rgba(47,74,53,.18);
+  --field-bg:#fffdf7;--radius:22px;--field-r:14px;
+  --font-display:"Bricolage Grotesque","Avenir Next",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-body:"DM Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font-body);line-height:1.55;font-size:1rem;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+[hidden]{display:none!important}
+.wrap{width:min(640px,100% - 2rem);margin-inline:auto;padding-block:1.25rem 3rem}
+.top{display:flex;align-items:center;gap:.6rem;font-family:var(--font-display);font-weight:800;letter-spacing:-.03em;font-size:1.1rem;margin-bottom:1.5rem}
+.top i{width:1.9rem;height:1.9rem;border-radius:50%;background:var(--accent);color:var(--on-accent);display:inline-grid;place-items:center;font-style:normal;font-size:1rem}
+.eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra)}
+.eyebrow::before{content:"";width:1.6rem;height:1.5px;background:currentColor}
+h1{font-family:var(--font-display);font-weight:800;letter-spacing:-.035em;line-height:1.05;font-size:clamp(1.9rem,8vw,2.6rem);margin:.6rem 0 .7rem}
+.lead{color:var(--muted);margin:0 0 1.5rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.25rem 1.1rem;margin-bottom:1rem}
+.card h2{font-family:var(--font-display);font-weight:800;letter-spacing:-.02em;font-size:1.2rem;margin:0 0 1rem;display:flex;align-items:center;gap:.6rem}
+.card h2 span{width:1.6rem;height:1.6rem;border-radius:50%;background:var(--butter);color:var(--fg);font-size:.8rem;display:inline-grid;place-items:center;font-family:var(--font-body);font-weight:700}
+.field{margin-bottom:1rem}.field:last-child{margin-bottom:0}
+label,.legend{display:block;font-weight:700;font-size:.92rem;margin-bottom:.35rem}
+.req{color:var(--terra)}
+.hint{display:block;font-weight:400;color:var(--muted);font-size:.82rem;margin-top:.1rem}
+input[type=text],input[type=tel],input[type=url],select,textarea{width:100%;font:inherit;font-size:1rem;color:var(--fg);background:var(--field-bg);border:1.5px solid var(--line-strong);border-radius:var(--field-r);padding:.75rem .9rem;min-height:3rem;appearance:none;-webkit-appearance:none}
+select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%232b2118' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem}
+textarea{min-height:6.5rem;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 4px var(--ring)}
+.invalid{border-color:var(--terra)!important}
+.err{color:var(--terra);font-size:.82rem;font-weight:600;margin-top:.3rem}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+.opts{display:grid;gap:.5rem}
+.opt{display:flex;align-items:center;gap:.7rem;min-height:3rem;padding:.55rem .8rem;border:1.5px solid var(--line-strong);border-radius:var(--field-r);background:var(--field-bg);font-weight:500;cursor:pointer;margin:0}
+.opt:has(input:checked){border-color:var(--accent);background:var(--bg2)}
+.opt input{width:1.2rem;height:1.2rem;accent-color:var(--accent);flex:none;margin:0}
+.opts.two{grid-template-columns:1fr 1fr}
+@media(max-width:380px){.opts.two{grid-template-columns:1fr}}
+.opt.pill{justify-content:center;text-align:center}
+.opt.pill input{position:absolute;opacity:0;pointer-events:none}
+.opt.pill:has(input:checked){background:var(--accent);color:var(--on-accent);border-color:var(--accent)}
+.opt.pill:has(input:focus-visible){outline:3px solid var(--accent);outline-offset:2px}
+.sub{margin-top:.5rem}
+.btn{display:flex;width:100%;align-items:center;justify-content:center;gap:.6rem;min-height:3.4rem;border-radius:999px;border:0;background:var(--accent);color:var(--on-accent);font:700 1.05rem var(--font-body);cursor:pointer;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px -12px var(--accent)}
+.btn.ghost{background:transparent;color:var(--fg);border:1.5px solid var(--line-strong);margin-top:.7rem}
+.btn:focus-visible{outline:3px solid var(--terra);outline-offset:3px}
+.note{color:var(--muted);font-size:.82rem;text-align:center;margin:.9rem 0 0}
+.formerr{background:#fbe3d8;border:1px solid var(--terra);color:#7a2f12;border-radius:var(--field-r);padding:.7rem .9rem;font-weight:600;font-size:.9rem;margin-bottom:1rem}
+.thanks{text-align:center;padding:1.5rem 1.1rem}
+.thanks .tick{width:3.4rem;height:3.4rem;border-radius:50%;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font-size:1.6rem;margin:0 auto 1rem}
+.thanks h2{display:block;font-size:1.6rem;margin-bottom:.6rem}
+.thanks p{color:var(--muted);margin:.4rem 0}
+.thanks .big{color:var(--fg);font-weight:700;font-size:1.05rem;background:var(--butter);border-radius:var(--field-r);padding:.8rem 1rem;margin:1rem 0}
+.warn{background:#fff3d1;border:1px solid #d9b650;color:#5b4410;border-radius:var(--field-r);padding:.7rem .9rem;font-size:.88rem;text-align:left;margin:1rem 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><i>✦</i> Quick client intake</div>
+
+  <div id="formView">
+    <span class="eyebrow">Welcome aboard</span>
+    <h1 id="greet">A few details to set things up</h1>
+    <p class="lead">Takes about 3 minutes. Fields marked <span class="req">*</span> are essential. Anything you skip, we can ask on WhatsApp later.</p>
+
+    <form id="intake" novalidate autocomplete="on">
+      <div id="formErr" class="formerr" role="alert" hidden></div>
+
+      <section class="card">
+        <h2><span>1</span>About you</h2>
+        <div class="field">
+          <label for="business">Business name <span class="req">*</span></label>
+          <input type="text" id="business" name="business" autocomplete="organization" required>
+        </div>
+        <div class="field">
+          <label for="contact">Contact person <span class="req">*</span></label>
+          <input type="text" id="contact" name="contact" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="phone">WhatsApp number <span class="req">*</span><span class="hint">10-digit mobile number the bot will run on or customers message</span></label>
+          <input type="tel" id="phone" name="phone" inputmode="tel" autocomplete="tel" placeholder="98XXXXXXXX" required>
+        </div>
+        <div class="field">
+          <label for="type">Business type <span class="req">*</span></label>
+          <select id="type" name="type" required>
+            <option value="">Select…</option>
+            <option value="restaurant">Restaurant</option>
+            <option value="pub">Pub / Bar</option>
+            <option value="cafe">Café</option>
+            <option value="realestate">Real estate</option>
+            <option value="shop">Shop / Retail</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="area">Address / area</label>
+          <input type="text" id="area" name="area" autocomplete="street-address" placeholder="e.g. INA Market, New Delhi">
+        </div>
+        <div class="field">
+          <label for="hours">Opening hours</label>
+          <input type="text" id="hours" name="hours" placeholder="e.g. Mon–Sun 11am–11pm">
+        </div>
+        <div class="field">
+          <label for="handler">Who handles WhatsApp messages now?</label>
+          <input type="text" id="handler" name="handler" placeholder="e.g. Me, a staff member, nobody">
+        </div>
+      </section>
+
+      <section class="card">
+        <h2><span>2</span>What's the main problem?</h2>
+        <fieldset class="field" id="problemsBox">
+          <legend class="legend">Pick all that apply <span class="req">*</span></legend>
+          <div class="opts">
+            <label class="opt"><input type="checkbox" name="problems" value="Missed late-night enquiries"> Missed late-night enquiries</label>
+            <label class="opt"><input type="checkbox" name="problems" value="Missed orders"> Missed orders</label>
+            <label class="opt"><input type="checkbox" name="problems" value="Slow replies"> Slow replies</label>
+            <label class="opt"><input type="checkbox" name="problems" value="No website"> No website</label>
+            <label class="opt"><input type="checkbox" name="problems" value="Follow-ups / leads"> Follow-ups / leads</label>
+            <label class="opt"><input type="checkbox" name="problems" value="Other" id="problemOtherCb"> Other</label>
+          </div>
+          <div class="sub" id="problemOtherWrap" hidden>
+            <input type="text" id="problemOther" name="problemOther" placeholder="Tell us in a few words" aria-label="Other problem">
+          </div>
+        </fieldset>
+      </section>
+
+      <section class="card">
+        <h2><span>3</span>For the bot</h2>
+        <div class="field">
+          <label for="offerings">What you sell, with key prices<span class="hint">Can't type it all? Write “will send menu” and share it on WhatsApp.</span></label>
+          <textarea id="offerings" name="offerings" placeholder="e.g. Fish thali ₹350, prawn curry ₹450… or: will send menu"></textarea>
+        </div>
+        <div class="field">
+          <label for="rules">Booking / order rules<span class="hint">Party size, delivery areas, charges, minimum order, advance, etc.</span></label>
+          <textarea id="rules" name="rules" placeholder="e.g. Delivery within 5 km, min order ₹300, ₹40 delivery"></textarea>
+        </div>
+        <fieldset class="field">
+          <legend class="legend">Preferred tone</legend>
+          <div class="opts two">
+            <label class="opt pill"><input type="radio" name="tone" value="Friendly" checked> Friendly</label>
+            <label class="opt pill"><input type="radio" name="tone" value="Professional"> Professional</label>
+          </div>
+        </fieldset>
+        <fieldset class="field">
+          <legend class="legend">Reply language</legend>
+          <div class="opts" style="grid-template-columns:repeat(3,1fr)">
+            <label class="opt pill"><input type="radio" name="language" value="English"> English</label>
+            <label class="opt pill"><input type="radio" name="language" value="Hindi"> Hindi</label>
+            <label class="opt pill"><input type="radio" name="language" value="Both" checked> Both</label>
+          </div>
+        </fieldset>
+      </section>
+
+      <section class="card">
+        <h2><span>4</span>Online &amp; services</h2>
+        <div class="field">
+          <label for="links">Website / Instagram / Google Maps links<span class="hint">Paste whatever you have, one per line.</span></label>
+          <textarea id="links" name="links" style="min-height:4.5rem" placeholder="https://instagram.com/yourbusiness"></textarea>
+        </div>
+        <fieldset class="field">
+          <legend class="legend">Services wanted</legend>
+          <div class="opts">
+            <label class="opt"><input type="checkbox" name="services" value="Instant WhatsApp replies & bookings"> Instant WhatsApp replies &amp; bookings</label>
+            <label class="opt"><input type="checkbox" name="services" value="Order capture"> Order capture</label>
+            <label class="opt"><input type="checkbox" name="services" value="Offer / lead broadcasts"> Offer / lead broadcasts</label>
+            <label class="opt"><input type="checkbox" name="services" value="Landing page"> Landing page</label>
+            <label class="opt"><input type="checkbox" name="services" value="Full website"> Full website</label>
+          </div>
+        </fieldset>
+        <div class="field">
+          <label for="notes">Anything else?</label>
+          <textarea id="notes" name="notes" style="min-height:4.5rem"></textarea>
+        </div>
+      </section>
+
+      <button class="btn" type="submit">Send on WhatsApp</button>
+      <p class="note">Your details are only used to set up your service. Submitting opens WhatsApp with a ready message — just press send.</p>
+    </form>
+  </div>
+
+  <div id="thanksView" hidden>
+    <section class="card thanks" aria-live="polite">
+      <div class="tick" aria-hidden="true">✓</div>
+      <h2>Thank you!</h2>
+      <p>WhatsApp should have opened with your details. Press <b>send</b> there to finish.</p>
+      <p class="big">Please also send your logo, menu/price list and a few photos in the same WhatsApp chat.</p>
+      <div class="warn" id="trimWarn" hidden></div>
+      <a class="btn" id="reopen" href="#" target="_blank" rel="noopener">Open WhatsApp again</a>
+      <button class="btn ghost" type="button" id="editBtn">Edit my answers</button>
+    </section>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+/* ===== CONFIG: our WhatsApp Business number (country code + number, digits only) ===== */
+const WA_NUMBER = "919871114568";
+/* ================================================================================ */
+const MAX_CHARS = 1800;
+const $ = id => document.getElementById(id);
+const form = $("intake");
+const TYPES = {restaurant:"Restaurant",pub:"Pub / Bar",cafe:"Café",realestate:"Real estate",shop:"Shop / Retail",other:"Other"};
+
+function normPhone(v){
+  let d = String(v||"").replace(/\D/g,"");
+  if(d.length===12 && d.startsWith("91")) d = d.slice(2);
+  else if(d.length===11 && d.startsWith("0")) d = d.slice(1);
+  return d;
+}
+
+/* ---- Prefill from URL ---- */
+(function prefill(){
+  const q = new URLSearchParams(location.search);
+  const get = k => (q.get(k)||"").trim();
+  const business = get("business"), name = get("name");
+  if(business) $("business").value = business;
+  if(name) $("contact").value = name;
+  if(get("phone")){ const p = normPhone(get("phone")); $("phone").value = p.length===10 ? p : get("phone"); }
+  if(get("area")) $("area").value = get("area");
+  const t = get("type").toLowerCase().replace(/[\s_-]/g,"");
+  if(TYPES[t]) $("type").value = t;
+  const first = name.split(/\s+/)[0];
+  const g = $("greet");
+  if(business) g.textContent = (first ? "Hi "+first+"," : "Hi,")+" a few details for "+business;
+  else if(first) g.textContent = "Hi "+first+", a few details to set things up";
+})();
+
+$("problemOtherCb").addEventListener("change", e => {
+  $("problemOtherWrap").hidden = !e.target.checked;
+  if(e.target.checked) $("problemOther").focus();
+});
+
+function setErr(el, msg){
+  const old = el.parentNode.querySelector(":scope > .err"); if(old) old.remove();
+  el.classList && el.classList.remove("invalid");
+  if(msg){
+    el.classList && el.classList.add("invalid");
+    const d = document.createElement("div"); d.className="err"; d.textContent = msg; d.setAttribute("role","alert");
+    el.parentNode.appendChild(d);
+  }
+}
+
+function validate(){
+  let first = null, ok = true;
+  const bad = (el,msg,scrollTo) => { setErr(el,msg); if(msg){ ok=false; if(!first) first = scrollTo||el; } };
+  bad($("business"), $("business").value.trim() ? "" : "Please enter your business name");
+  bad($("contact"), $("contact").value.trim() ? "" : "Please enter the contact person's name");
+  const ph = normPhone($("phone").value);
+  bad($("phone"), /^[6-9]\d{9}$/.test(ph) ? "" : "Enter a valid 10-digit mobile number");
+  bad($("type"), $("type").value ? "" : "Please choose a business type");
+  const probs = [...form.querySelectorAll('input[name=problems]:checked')];
+  const pbox = $("problemsBox");
+  const old = pbox.querySelector(":scope > .err"); if(old) old.remove();
+  if(!probs.length){
+    const d = document.createElement("div"); d.className="err"; d.textContent="Pick at least one problem"; d.setAttribute("role","alert");
+    pbox.appendChild(d); ok=false; if(!first) first = pbox;
+  }
+  if($("problemOtherCb").checked && !$("problemOther").value.trim()){
+    bad($("problemOther"),"Please describe the other problem", $("problemOther"));
+  } else setErr($("problemOther"),"");
+  const fe = $("formErr");
+  fe.hidden = ok; if(!ok) fe.textContent = "Please fix the highlighted fields.";
+  if(first){ first.scrollIntoView({behavior:"smooth",block:"center"}); if(first.focus && first!==pbox) first.focus({preventScroll:true}); }
+  return ok;
+}
+
+function collect(){
+  const val = id => $(id).value.trim();
+  const checked = n => [...form.querySelectorAll('input[name='+n+']:checked')].map(i=>i.value);
+  return {
+    business: val("business"),
+    contact: val("contact"),
+    phone: "+91"+normPhone($("phone").value),
+    type: TYPES[$("type").value] || $("type").value,
+    area: val("area"),
+    hours: val("hours"),
+    whatsapp_handler: val("handler"),
+    problems: checked("problems"),
+    problem_other: $("problemOtherCb").checked ? val("problemOther") : "",
+    offerings: val("offerings"),
+    rules: val("rules"),
+    tone: (form.querySelector('input[name=tone]:checked')||{}).value || "",
+    language: (form.querySelector('input[name=language]:checked')||{}).value || "",
+    links: val("links"),
+    services: checked("services"),
+    notes: val("notes")
+  };
+}
+
+const LONG = ["offerings","rules","notes","links","hours","area","whatsapp_handler","problem_other"];
+const preview = (s,n) => { s = s.replace(/\s+/g," "); return s.length>n ? s.slice(0,n-1)+"…" : s; };
+const cut = (s,n) => s.length>n ? s.slice(0,Math.max(0,n-1)).trimEnd()+"…" : s;
+
+function build(data){
+  const d = Object.assign({}, data), trimmed = [];
+  function render(){
+    const probs = d.problems.map(p => p==="Other" && d.problem_other ? "Other: "+preview(d.problem_other,60) : p).join(", ");
+    const lines = [
+      "NEW CLIENT INTAKE",
+      "Business: "+d.business+" ("+d.type+")",
+      "Contact: "+d.contact+" | "+d.phone,
+    ];
+    if(d.area) lines.push("Area: "+preview(d.area,60));
+    if(d.hours) lines.push("Hours: "+preview(d.hours,60));
+    lines.push("Problems: "+probs);
+    if(d.services.length) lines.push("Services: "+d.services.join(", "));
+    lines.push("Tone: "+d.tone+" | Language: "+d.language);
+    if(d.offerings) lines.push("Offerings: "+preview(d.offerings,70));
+    if(d.rules) lines.push("Rules: "+preview(d.rules,70));
+    const payload = Object.assign({}, d); if(trimmed.length) payload.trimmed = trimmed;
+    lines.push("", "INTAKE_JSON: "+JSON.stringify(payload));
+    return lines.join("\n");
+  }
+  let msg = render();
+  for(let limit=600; msg.length>MAX_CHARS && limit>=20; limit-=20){
+    LONG.forEach(k => {
+      const orig = data[k];
+      if(orig && orig.length>limit){
+        d[k] = cut(orig, limit);
+        if(trimmed.indexOf(k)<0) trimmed.push(k);
+      }
+    });
+    msg = render();
+  }
+  return {msg, trimmed};
+}
+
+const LABELS = {offerings:"what you sell / prices",rules:"booking/order rules",notes:"anything else",links:"links",hours:"opening hours",area:"address",whatsapp_handler:"who handles WhatsApp",problem_other:"other problem"};
+
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  if(!validate()) return;
+  const {msg, trimmed} = build(collect());
+  const url = "https://wa.me/"+WA_NUMBER+"?text="+encodeURIComponent(msg);
+  $("reopen").href = url;
+  const w = $("trimWarn");
+  if(trimmed.length){
+    w.hidden = false;
+    w.textContent = "Heads up: these answers were long and have been shortened in the message: "+trimmed.map(k=>LABELS[k]||k).join(", ")+". Please send the full details in the same chat.";
+  } else w.hidden = true;
+  $("formView").hidden = true; $("thanksView").hidden = false;
+  window.scrollTo(0,0);
+  const win = window.open(url, "_blank");
+  if(!win) location.href = url;
+});
+
+$("editBtn").addEventListener("click", () => {
+  $("thanksView").hidden = true; $("formView").hidden = false; window.scrollTo(0,0);
+});
+})();
+</script>
+</body>
+</html>
