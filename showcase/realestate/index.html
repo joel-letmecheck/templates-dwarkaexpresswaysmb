@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Alder &amp; Crest Realty — Sample real-estate website template</title>
+<meta name="description" content="Sample real-estate broker website template with filterable listings. Placeholder content only.">
+<meta name="theme-color" content="#0c2f30">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230f3d3e'/%3E%3Cpath d='M16 6 6 26h6l4-9 4 9h6z' fill='%23d6a85a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <pattern id="win" width="11" height="15" patternUnits="userSpaceOnUse"><rect x="3" y="4" width="5" height="7" rx=".8" fill="#ffeab8" opacity=".85"/></pattern>
+    <pattern id="glass" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M0 0H20M0 0V20" stroke="#fff" stroke-opacity=".3" fill="none"/></pattern>
+    <symbol id="art-tower" viewBox="0 0 400 250">
+      <rect x="0" y="224" width="400" height="26" fill="currentColor" opacity=".16"/>
+      <rect x="52" y="90" width="72" height="136" fill="currentColor" opacity=".55"/><rect x="52" y="90" width="72" height="136" fill="url(#win)"/>
+      <rect x="140" y="28" width="96" height="198" fill="currentColor"/><rect x="140" y="28" width="96" height="198" fill="url(#win)"/><rect x="140" y="28" width="96" height="6" fill="#fff" opacity=".4"/>
+      <rect x="252" y="72" width="84" height="154" fill="currentColor" opacity=".75"/><rect x="252" y="72" width="84" height="154" fill="url(#win)"/>
+      <rect x="176" y="196" width="24" height="30" fill="#fff" opacity=".45"/>
+    </symbol>
+    <symbol id="art-villa" viewBox="0 0 400 250">
+      <rect x="0" y="224" width="400" height="26" fill="currentColor" opacity=".16"/>
+      <polygon points="62,130 200,56 338,130" fill="currentColor"/>
+      <rect x="84" y="130" width="232" height="96" fill="currentColor" opacity=".85"/>
+      <rect x="84" y="152" width="232" height="3" fill="#fff" opacity=".25"/>
+      <rect x="108" y="160" width="46" height="38" rx="2" fill="#fff6dc" opacity=".85"/><rect x="246" y="160" width="46" height="38" rx="2" fill="#fff6dc" opacity=".85"/>
+      <rect x="180" y="170" width="40" height="56" rx="2" fill="#fff" opacity=".4"/>
+      <rect x="356" y="190" width="6" height="36" fill="currentColor" opacity=".6"/><circle cx="359" cy="172" r="26" fill="currentColor" opacity=".5"/>
+      <rect x="38" y="204" width="5" height="22" fill="currentColor" opacity=".6"/><circle cx="40" cy="192" r="18" fill="currentColor" opacity=".5"/>
+    </symbol>
+    <symbol id="art-plot" viewBox="0 0 400 250">
+      <circle cx="318" cy="64" r="28" fill="#fff" opacity=".6"/>
+      <polygon points="30,236 118,142 330,142 392,236" fill="currentColor" opacity=".3"/>
+      <polygon points="30,236 118,142 330,142 392,236" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="9 6"/>
+      <path d="M74 189H361M96 165H345M200 142V236" stroke="currentColor" stroke-opacity=".3" stroke-width="1.500"/>
+      <line x1="200" y1="142" x2="200" y2="64" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><polygon points="202,64 252,80 202,96" fill="currentColor"/>
+      <circle cx="200" cy="142" r="6" fill="currentColor"/>
+    </symbol>
+    <symbol id="art-office" viewBox="0 0 400 250">
+      <rect x="0" y="224" width="400" height="26" fill="currentColor" opacity=".16"/>
+      <rect x="84" y="36" width="130" height="190" fill="currentColor"/><rect x="84" y="36" width="130" height="190" fill="url(#glass)"/>
+      <polygon points="84,36 150,36 84,130" fill="#fff" opacity=".14"/>
+      <rect x="228" y="100" width="96" height="126" fill="currentColor" opacity=".7"/><rect x="228" y="100" width="96" height="126" fill="url(#glass)"/>
+      <rect x="130" y="190" width="38" height="36" fill="#fff" opacity=".4"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="nav" id="top">
+  <div class="container nav-bar">
+    <a class="brand" href="#top" aria-label="Alder &amp; Crest Realty, back to top">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3 4 29h6.500L16 16.500 21.500 29H28z" fill="currentColor"/><path d="M11 29h10" stroke="currentColor" stroke-width="2"/></svg>
+      <span><b>Alder &amp; Crest</b><small>Realty</small></span>
+    </a>
+    <nav class="nav-links" id="menu-nav" aria-label="Primary">
+      <a href="#services">Services</a><a href="#listings">Listings</a><a href="#process">Process</a><a href="#area">Area</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
+      <a class="btn btn-primary mobile-cta" href="#enquire">Book a consultation</a>
+    </nav>
+    <a class="btn btn-primary btn-sm nav-cta" href="#enquire">Book a consultation</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-nav" aria-label="Open menu"><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero dark" aria-labelledby="h1">
+  <div class="container">
+    <div>
+      <p class="eyebrow reveal">Dwarka Expressway · Gurugram</p>
+      <h1 id="h1" class="reveal" style="--d:.08s">Homes worth <em>coming home to.</em></h1>
+      <p class="lead reveal" style="--d:.18s">A boutique advisory for buyers, sellers and tenants. Honest guidance, verified paperwork and viewings that respect your time. This is a sample website template, so all names, listings and prices are placeholders.</p>
+      <div class="cta reveal" style="--d:.28s"><a class="btn btn-primary" href="#listings">Browse sample listings</a><a class="btn btn-ghost" href="#enquire">Book a consultation</a></div>
+    </div>
+    <article class="hero-card reveal" style="--d:.3s" aria-label="Featured sample listing">
+      <div class="art art-a"><svg viewBox="0 0 400 230" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of a residential tower"><use href="#art-tower"/></svg></div>
+      <div class="body"><span class="badge-sample" style="color:#d6a85a;border-color:#d6a85a">Sample listing</span><h2>3 BHK Skyline Residence</h2><p>Sector 104, Dwarka Expressway</p><p class="price">₹1.85 Cr</p></div>
+    </article>
+  </div>
+  <svg class="skyline" viewBox="0 0 1200 220" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+    <g fill="#14504f" opacity=".7"><rect x="30" y="110" width="70" height="110"/><rect x="190" y="70" width="60" height="150"/><rect x="330" y="120" width="90" height="100"/><rect x="520" y="60" width="64" height="160"/><rect x="700" y="100" width="80" height="120"/><rect x="880" y="50" width="62" height="170"/><rect x="1040" y="110" width="90" height="110"/></g>
+    <g fill="currentColor"><rect x="0" y="150" width="90" height="70"/><rect x="100" y="90" width="70" height="130"/><rect x="170" y="130" width="50" height="90"/><rect x="250" y="40" width="80" height="180"/><rect x="340" y="120" width="60" height="100"/><rect x="420" y="80" width="90" height="140"/><rect x="520" y="140" width="60" height="80"/><rect x="600" y="20" width="76" height="200"/><rect x="690" y="100" width="70" height="120"/><rect x="770" y="60" width="60" height="160"/><rect x="840" y="130" width="80" height="90"/><rect x="940" y="30" width="84" height="190"/><rect x="1034" y="110" width="60" height="110"/><rect x="1104" y="70" width="96" height="150"/></g>
+    <g fill="url(#win)" opacity=".55"><rect x="100" y="90" width="70" height="130"/><rect x="250" y="40" width="80" height="180"/><rect x="420" y="80" width="90" height="140"/><rect x="600" y="20" width="76" height="200"/><rect x="770" y="60" width="60" height="160"/><rect x="940" y="30" width="84" height="190"/><rect x="1104" y="70" width="96" height="150"/></g>
+  </svg>
+</section>
+
+<section class="section" id="services" aria-labelledby="sv-h">
+  <div class="container">
+    <div class="sec-head reveal"><span class="eyebrow">What we do</span><h2 id="sv-h">Every step of the move, <em>handled.</em></h2><p>Four services a broker website usually leads with. Edit the copy to match your practice.</p></div>
+    <ul class="services">
+      <li class="service reveal"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15 16 5l12 10M7 13v14h18V13M13 27v-8h6v8"/></svg><h3>Buy</h3><p>Shortlists matched to your budget, with site visits and honest pros and cons.</p></li>
+      <li class="service reveal" style="--d:.08s"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6h10l10 10-10 10L6 16z"/><circle cx="12" cy="12" r="1.600"/></svg><h3>Sell</h3><p>Pricing guidance, professional presentation and screened, serious buyers.</p></li>
+      <li class="service reveal" style="--d:.16s"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="16" r="5"/><path d="M16 16h12M24 16v5M28 16v3"/></svg><h3>Rent</h3><p>Verified tenants and owners, clear agreements and move-in support.</p></li>
+      <li class="service reveal" style="--d:.24s"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4 5 8v8c0 6 5 10 11 12 6-2 11-6 11-12V8z"/><path d="m11.500 16 3.500 3.500 6-7"/></svg><h3>Manage</h3><p>Rent collection, upkeep and regular updates for owners who live elsewhere.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section listings-wrap" id="listings" aria-labelledby="ls-h">
+  <div class="container">
+    <div class="sec-head reveal"><span class="eyebrow">Featured properties</span><h2 id="ls-h">Sample listings, <em>beautifully presented.</em></h2><p>Filter by type. Every listing here is an illustrative placeholder.</p></div>
+    <div class="chips reveal" role="group" aria-label="Filter listings" data-filter-group="#listing-grid">
+      <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+      <button class="chip" type="button" data-filter="apartments" aria-pressed="false">Apartments</button>
+      <button class="chip" type="button" data-filter="villas" aria-pressed="false">Villas</button>
+      <button class="chip" type="button" data-filter="plots" aria-pressed="false">Plots</button>
+      <button class="chip" type="button" data-filter="commercial" aria-pressed="false">Commercial</button>
+      <button class="chip" type="button" data-filter="rent" aria-pressed="false">For rent</button>
+    </div>
+    <p class="count" data-count aria-live="polite">Showing 9 sample listings</p>
+    <div class="grid" id="listing-grid">
+      <article class="listing reveal" data-cat="apartments buy" style="--d:0s">
+        <div class="art art-a"><div class="tags"><span class="pill dark">For sale</span><span class="pill">Sample listing</span></div><svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of a residential tower"><use href="#art-tower"/></svg></div>
+        <div class="info"><h3>3 BHK Skyline Residence</h3><p class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.200 7-12a7 7 0 0 0-14 0c0 5.800 7 12 7 12z"/><circle cx="12" cy="10" r="2.500"/></svg>Sector 104, Dwarka Expressway</p><div class="specs"><span><b>3</b> Beds</span><span><b>3</b> Baths</span><span><b>1,650</b> sq ft</span></div><div class="foot"><span class="price">₹1.85 Cr</span><a class="btn btn-ghost btn-sm" href="#enquire" data-enquire="3 BHK Skyline Residence">Enquire</a></div></div>
+      </article>
+      <article class="listing reveal" data-cat="villas buy" style="--d:0.08s">
+        <div class="art art-b"><div class="tags"><span class="pill dark">For sale</span><span class="pill">Sample listing</span></div><svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of a modern villa"><use href="#art-villa"/></svg></div>
+        <div class="info"><h3>Courtyard Villa</h3><p class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.200 7-12a7 7 0 0 0-14 0c0 5.800 7 12 7 12z"/><circle cx="12" cy="10" r="2.500"/></svg>Sector 106, Dwarka Expressway</p><div class="specs"><span><b>4</b> Beds</span><span><b>5</b> Baths</span><span><b>3,400</b> sq ft</span></div><div class="foot"><span class="price">₹5.40 Cr</span><a class="btn btn-ghost btn-sm" href="#enquire" data-enquire="Courtyard Villa">Enquire</a></div></div>
+      </article>
+      <article class="listing reveal" data-cat="apartments rent" style="--d:0.16s">
+        <div class="art art-c"><div class="tags"><span class="pill dark">For rent</span><span class="pill">Sample listing</span></div><svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of a residential tower"><use href="#art-tower"/></svg></div>
+        <div class="info"><h3>2 BHK Furnished Apartment</h3><p class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.200 7-12a7 7 0 0 0-14 0c0 5.800 7 12 7 12z"/><circle cx="12" cy="10" r="2.500"/></svg>Sector 99, Dwarka Expressway</p><div class="specs"><span><b>2</b> Beds</span><span><b>2</b> Baths</span><span><b>1,150</b> sq ft</span></div><div class="foot"><span class="price">₹38,000 <small>/ month</small></span><a class="btn btn-ghost btn-sm" href="#enquire" data-enquire="2 BHK Furnished Apartment">Enquire</a></div></div>
+      </article>
+      <article class="listing reveal" data-cat="commercial rent" style="--d:0s">
+        <div class="art art-d"><div class="tags"><span class="pill dark">For rent</span><span class="pill">Sample listing</span></div><svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of a glass office building"><use href="#art-office"/></svg></div>
+        <div class="info"><h3>Furnished Office Suite</h3><p class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.200 7-12a7 7 0 0 0-14 0c0 5.800 7 12 7 12z"/><circle cx="12" cy="10" r="2.500"/></svg>Sector 109, Dwarka Expressway</p><div class="specs"><span><b>1,200</b> sq ft</span><span><b>Fitted</b> interiors</span><span><b>6</b> Seats</span></div><div class="foot"><span class="price">₹1.10 L <small>/ month</small></span><a class="btn btn-ghost btn-sm" href="#enquire" data-enquire="Furnished Office Suite">Enquire</a></div></div>
+      </article>
+      <article class="listing reveal" data-cat="plots buy" style="--d:0.08s">
+        <div class="art art-e"><div class="tags"><span class="pill dark">For sale</span><span class="pill">Sample listing</span></div><svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of an empty residential plot"><use href="#art-plot"/></svg></div>
+        <div class="info"><h3>Residential Plot, 200 sq yd</h3><p class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.200 7-12a7 7 0 0 0-14 0c0 5.800 7 12 7 12z"/><circle cx="12" cy="10" r="2.500"/></svg>Sector 110, Dwarka Expressway</p><div class="specs"><span><b>200</b> sq yd</span><span><b>East</b> facing</span><span><b>Corner</b> plot</span></div><div class="foot"><span class="price">₹2.10 Cr</span><a class="btn btn-ghost btn-sm" href="#enquire" data-enquire="Residential Plot, 200 sq yd">Enquire</a></div></div>
+      </article>
+      <article class="listing reveal" data-cat="apartments buy" style="--d:0.16s">
+        <div class="art art-b"><div class="tags"><span class="pill dark">For sale</span><span class="pill">Sample listing</span></div><svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of a residential tower"><use href="#art-tower"/></svg></div>
+        <div class="info"><h3>4 BHK Garden-view Apartment</h3><p class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.200 7-12a7 7 0 0 0-14 0c0 5.800 7 12 7 12z"/><circle cx="12" cy="10" r="2.500"/></svg>Sector 109, Dwarka Expressway</p><div class="specs"><span><b>4</b> Beds</span><span><b>4</b> Baths</span><span><b>2,350</b> sq ft</span></div><div class="foot"><span class="price">₹3.10 Cr</span><a class="btn btn-ghost btn-sm" href="#enquire" data-enquire="4 BHK Garden-view Apartment">Enquire</a></div></div>
+      </article>
+      <article class="listing reveal" data-cat="villas buy" style="--d:0s">
+        <div class="art art-e"><div class="tags"><span class="pill dark">For sale</span><span class="pill">Sample listing</span></div><svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of a modern villa"><use href="#art-villa"/></svg></div>
+        <div class="info"><h3>Modern Row Villa</h3><p class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.200 7-12a7 7 0 0 0-14 0c0 5.800 7 12 7 12z"/><circle cx="12" cy="10" r="2.500"/></svg>Sector 113, Dwarka Expressway</p><div class="specs"><span><b>3</b> Beds</span><span><b>4</b> Baths</span><span><b>2,600</b> sq ft</span></div><div class="foot"><span class="price">₹3.95 Cr</span><a class="btn btn-ghost btn-sm" href="#enquire" data-enquire="Modern Row Villa">Enquire</a></div></div>
+      </article>
+      <article class="listing reveal" data-cat="commercial buy" style="--d:0.08s">
+        <div class="art art-a"><div class="tags"><span class="pill dark">For sale</span><span class="pill">Sample listing</span></div><svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of a glass office building"><use href="#art-office"/></svg></div>
+        <div class="info"><h3>Ground-floor Retail Unit</h3><p class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.200 7-12a7 7 0 0 0-14 0c0 5.800 7 12 7 12z"/><circle cx="12" cy="10" r="2.500"/></svg>Sector 102, Dwarka Expressway</p><div class="specs"><span><b>450</b> sq ft</span><span><b>Main</b> road facing</span><span><b>Ready</b> possession</span></div><div class="foot"><span class="price">₹1.60 Cr</span><a class="btn btn-ghost btn-sm" href="#enquire" data-enquire="Ground-floor Retail Unit">Enquire</a></div></div>
+      </article>
+      <article class="listing reveal" data-cat="plots buy" style="--d:0.08s">
+        <div class="art art-c"><div class="tags"><span class="pill dark">For sale</span><span class="pill">Sample listing</span></div><svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of an empty residential plot"><use href="#art-plot"/></svg></div>
+        <div class="info"><h3>Corner Plot, 300 sq yd</h3><p class="loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.200 7-12a7 7 0 0 0-14 0c0 5.800 7 12 7 12z"/><circle cx="12" cy="10" r="2.500"/></svg>Sector 111, Dwarka Expressway</p><div class="specs"><span><b>300</b> sq yd</span><span><b>North</b> facing</span><span><b>Park</b> view</span></div><div class="foot"><span class="price">₹3.20 Cr</span><a class="btn btn-ghost btn-sm" href="#enquire" data-enquire="Corner Plot, 300 sq yd">Enquire</a></div></div>
+      </article>    </div>
+    <p class="fine">Sample listings. Locations, sizes and prices are illustrative and not real properties.</p>
+  </div>
+</section>
+
+<section class="section dark" id="process" aria-labelledby="pr-h">
+  <div class="container">
+    <div class="sec-head reveal"><span class="eyebrow">How it works</span><h2 id="pr-h">A clear path, <em>no surprises.</em></h2></div>
+    <ol class="steps" style="list-style:none;margin:0;padding:0">
+      <li class="step reveal"><div><h3>Consult</h3><p>A short call to understand your goals, budget and timeline.</p></div></li>
+      <li class="step reveal" style="--d:.08s"><div><h3>Shortlist</h3><p>A curated set of options with honest notes on each.</p></div></li>
+      <li class="step reveal" style="--d:.16s"><div><h3>Visit</h3><p>Scheduled viewings, with answers to every practical question.</p></div></li>
+      <li class="step reveal" style="--d:.24s"><div><h3>Close</h3><p>Paperwork checks, negotiation support and a smooth handover.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" id="area" aria-labelledby="ar-h">
+  <div class="container area">
+    <div class="area-art reveal">
+      <svg viewBox="0 0 500 480" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Stylised illustration of a diagonal expressway with neighbourhood blocks and location pins">
+        <defs><path id="road" d="M-20 470 L520 40"/></defs>
+        <rect width="500" height="480" fill="#0f3d3e"/>
+        <g fill="#164b4a"><rect x="30" y="40" width="130" height="90" rx="8"/><rect x="190" y="30" width="110" height="70" rx="8"/><rect x="40" y="170" width="120" height="110" rx="8"/><rect x="330" y="200" width="140" height="100" rx="8"/><rect x="250" y="330" width="130" height="110" rx="8"/><rect x="60" y="340" width="120" height="100" rx="8"/><rect x="340" y="60" width="120" height="100" rx="8"/></g>
+        <use href="#road" stroke="#2c6463" stroke-width="46" fill="none" stroke-linecap="round"/>
+        <use href="#road" stroke="#d6a85a" stroke-width="2" stroke-dasharray="14 12" fill="none" opacity=".8"/>
+        <text font-family="Outfit,sans-serif" font-size="13" font-weight="600" letter-spacing="3" fill="#f6f2ea" opacity=".85" dy="-20"><textPath href="#road" startOffset="22%">DWARKA EXPRESSWAY (SAMPLE MAP ART)</textPath></text>
+        <g fill="#d6a85a"><g transform="translate(150 290)"><circle r="9"/><circle r="18" fill="none" stroke="#d6a85a" opacity=".5"/></g><g transform="translate(330 170)"><circle r="9"/><circle r="18" fill="none" stroke="#d6a85a" opacity=".5"/></g><g transform="translate(250 245)"><circle r="9"/><circle r="18" fill="none" stroke="#d6a85a" opacity=".5"/></g></g>
+      </svg>
+    </div>
+    <div class="reveal" style="--d:.1s">
+      <span class="eyebrow">The neighbourhood</span>
+      <h2 style="font-size:clamp(2.2rem,5.5vw,3.6rem);margin:var(--s3) 0 var(--s5)">Know the <em>corridor.</em></h2>
+      <ul class="area-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.600" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20 20 4M7 20h13V7"/></svg><div><h3>Connectivity</h3><p>Placeholder: describe road, metro and airport access you want to highlight.</p></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.600" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10 12 4l9 6M5 10v9h14v-9M10 19v-5h4v5"/></svg><div><h3>Living</h3><p>Placeholder: schools, hospitals, parks and daily conveniences nearby.</p></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.600" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10l6-3v13M10 20V4l10 4v12M3 20h18"/></svg><div><h3>Investment</h3><p>Placeholder: share your honest take on pricing trends and what to watch.</p></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section reviews-wrap" id="reviews" aria-labelledby="rv-h">
+  <div class="container">
+    <div class="sec-head reveal"><span class="eyebrow">Client voices</span><h2 id="rv-h">Words from <em>clients.</em></h2><p>Placeholder testimonials. Replace with real, permissioned reviews before launch.</p></div>
+    <div class="reviews">
+      <article class="review reveal"><span class="badge-sample">Sample testimonial</span><blockquote>“Placeholder: a short, specific line about the buying, selling or renting experience goes here.”</blockquote><div class="who"><span class="avatar" aria-hidden="true"></span><span><b>Client name</b>Buyer · date</span></div></article>
+      <article class="review reveal" style="--d:.1s"><span class="badge-sample">Sample testimonial</span><blockquote>“Placeholder: swap this for a real quote, with the client’s permission. Two sentences is plenty.”</blockquote><div class="who"><span class="avatar" aria-hidden="true"></span><span><b>Client name</b>Seller · date</span></div></article>
+      <article class="review reveal" style="--d:.2s"><span class="badge-sample">Sample testimonial</span><blockquote>“Placeholder: mention what made the process easier, such as communication or paperwork.”</blockquote><div class="who"><span class="avatar" aria-hidden="true"></span><span><b>Client name</b>Tenant · date</span></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section dark" id="enquire" aria-labelledby="en-h">
+  <div class="container enquire">
+    <div class="copy reveal"><span class="eyebrow">Book a consultation</span><h2 id="en-h">Tell us what <em>you’re looking for.</em></h2><p>Share a few details and a broker would reply the same day. This is a demo form, so nothing is actually sent.</p>
+      <ul><li>Free, no-obligation conversation (sample copy)</li><li>Shortlist within 48 hours (sample copy)</li><li>Verified paperwork on every sample listing</li></ul></div>
+    <div class="card reveal" style="--d:.1s">
+      <form class="form" data-demo="done-e" novalidate>
+        <div class="field"><label for="e-name">Name</label><input id="e-name" name="name" type="text" autocomplete="off" placeholder="Your name" required></div>
+        <div class="field"><label for="e-phone">Phone</label><input id="e-phone" name="phone" type="tel" autocomplete="off" placeholder="+91 00000 00000" required></div>
+        <div class="field"><label for="e-goal">I want to</label><select id="e-goal" name="goal" required><option value="">Select</option><option>Buy</option><option>Sell</option><option>Rent a property</option><option>Rent out my property</option></select></div>
+        <div class="field"><label for="e-type">Property type</label><select id="e-type" name="type"><option>Apartment</option><option>Villa or floor</option><option>Plot</option><option>Commercial</option></select></div>
+        <div class="field"><label for="e-budget">Budget</label><select id="e-budget" name="budget"><option>Not sure yet</option><option>Under ₹1 Cr</option><option>₹1 – 2 Cr</option><option>₹2 – 4 Cr</option><option>₹4 Cr +</option></select></div>
+        <div class="field"><label for="interest">Property of interest</label><input id="interest" name="interest" type="text" autocomplete="off" placeholder="Optional"></div>
+        <div class="field full"><label for="e-msg">Message (optional)</label><textarea id="e-msg" name="message" placeholder="Preferred sectors, timeline, anything else"></textarea></div>
+        <button class="btn btn-primary" type="submit">Request a call back</button>
+        <p class="form-note">Demo form. Nothing is sent, saved or shared.</p>
+      </form>
+      <div class="form-done" id="done-e" role="status" aria-live="polite" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12.500l3 3 5-6"/></svg><div><strong>This is a demo form</strong><p>Nothing was sent. On a live site, your enquiry would reach the team here.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact" aria-labelledby="ct-h">
+  <div class="container">
+    <div class="sec-head reveal"><span class="eyebrow">Contact</span><h2 id="ct-h">Visit the <em>office.</em></h2></div>
+    <div class="contact">
+      <div class="contact-info reveal">
+        <div><h3>Office</h3><p>Sample office address<br>Dwarka Expressway, Gurugram, Haryana</p></div>
+        <div><h3>Contact</h3><p>+91 00000 00000<br>hello@your-domain.example</p></div>
+        <div><h3>Hours (sample)</h3><p>Mon – Sat, 10:00 am – 7:00 pm<br>Sunday by appointment</p></div>
+      </div>
+      <div class="map reveal" style="--d:.1s"><div class="map-fallback" aria-hidden="true">Map loads here</div>
+        <iframe title="Map of Dwarka Expressway, Gurugram (generic location)" src="https://www.google.com/maps?q=Dwarka+Expressway,+Gurugram&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer"><div class="container"><p><strong>Alder &amp; Crest Realty</strong> · fictional brand</p><p>Sample website template by [Your brand]. Placeholder content.</p></div></footer>
+<script src="script.js"></script>
+</body>
+</html>

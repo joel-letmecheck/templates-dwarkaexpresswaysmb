@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Pistachio &amp; Pour Café — Sample café website template</title>
+<meta name="description" content="Sample café website template with menu tabs and table booking. Placeholder content only.">
+<meta name="theme-color" content="#fbf4e8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23a9c284'/%3E%3Cpath d='M8 13h14v5a6 6 0 0 1-6 6h-2a6 6 0 0 1-6-6zM22 14h2a3 3 0 0 1 0 6h-2' fill='%232f4a35'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Sans:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+  <symbol id="i-cup" viewBox="0 0 24 24"><path d="M5 9h12v4a5 5 0 0 1-5 5h-2a5 5 0 0 1-5-5zM17 10h1.500a2.500 2.500 0 0 1 0 5H17M8 3v2M12 3v2" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-plate" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.800"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.800"/></symbol>
+  <symbol id="i-bake" viewBox="0 0 24 24"><path d="M3 15c0-5 4-9 9-9s9 4 9 9zM3 18h18M9 8l1 4M15 8l-1 4" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-glass" viewBox="0 0 24 24"><path d="M6 5h12l-1.500 14a2 2 0 0 1-2 1.800h-5a2 2 0 0 1-2-1.800zM14 5l2-3M7 10h10" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <pattern id="bean" width="46" height="46" patternUnits="userSpaceOnUse" patternTransform="rotate(18)"><ellipse cx="12" cy="12" rx="9" ry="6" fill="#6b4226"/><path d="M4 12q8-5 16 0" stroke="#2b1a0e" stroke-width="1.600" fill="none"/><ellipse cx="35" cy="35" rx="9" ry="6" fill="#7a4b2b" transform="rotate(40 35 35)"/><path d="M27 35q8-5 16 0" stroke="#2b1a0e" stroke-width="1.600" fill="none" transform="rotate(40 35 35)"/></pattern>
+</defs></svg>
+
+<header class="nav" id="top">
+  <div class="container nav-bar">
+    <a class="brand" href="#top" aria-label="Pistachio &amp; Pour Café, back to top">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#a9c284"/><path d="M8 13h14v5a6 6 0 0 1-6 6h-2a6 6 0 0 1-6-6zM22 14h2a3 3 0 0 1 0 6h-2" fill="#2f4a35"/><path d="M12 6c-1 1.500 1 2.500 0 4M17 6c-1 1.500 1 2.500 0 4" stroke="#2f4a35" stroke-width="1.500" fill="none" stroke-linecap="round"/></svg>
+      <span><b>Pistachio &amp; Pour</b><small>café</small></span>
+    </a>
+    <nav class="nav-links" id="menu-nav" aria-label="Primary">
+      <a href="#about">About</a><a href="#menu">Menu</a><a href="#gallery">Gallery</a><a href="#moments">Moments</a><a href="#reviews">Reviews</a><a href="#visit">Visit</a>
+      <a class="btn btn-primary mobile-cta" href="#book">Book a table</a>
+    </nav>
+    <a class="btn btn-primary btn-sm nav-cta" href="#book">Book a table</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-nav" aria-label="Open menu"><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" aria-labelledby="h1">
+  <span class="blob b1" aria-hidden="true"></span><span class="blob b2" aria-hidden="true"></span>
+  <div class="container">
+    <div>
+      <p class="eyebrow reveal">Specialty coffee · Fresh bakes · Dwarka Expressway</p>
+      <h1 id="h1" class="reveal" style="--d:.08s">Slow mornings, <em>good coffee.<svg viewBox="0 0 300 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 9C40 2 70 13 110 7S190 2 230 8s50 3 68 0" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round"/></svg></em></h1>
+      <p class="lead reveal" style="--d:.18s">A bright, plant-filled corner café for flat whites, warm croissants and long catch-ups. This is a sample website template, so every name, dish and price is placeholder content.</p>
+      <div class="cta reveal" style="--d:.28s"><a class="btn btn-primary" href="#book">Book a table</a><a class="btn btn-ghost" href="#menu">See the menu</a></div>
+      <ul class="perks reveal" style="--d:.38s"><li>Open daily</li><li>Laptop-friendly mornings</li><li>Vegetarian options</li></ul>
+    </div>
+    <div class="cup-wrap reveal" style="--d:.2s">
+      <svg class="cup" viewBox="0 0 420 380" role="img" aria-label="Illustration of a steaming latte in a cup on a saucer">
+        <defs><linearGradient id="cupg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fffaf0"/><stop offset="1" stop-color="#eadfca"/></linearGradient></defs>
+        <ellipse cx="200" cy="318" rx="170" ry="38" fill="#a9c284"/><ellipse cx="200" cy="308" rx="170" ry="38" fill="#c9dba9"/><ellipse cx="200" cy="304" rx="110" ry="22" fill="#a9c284" opacity=".6"/>
+        <path d="M284 196h22a38 38 0 0 1 0 76h-30" fill="none" stroke="#fffaf0" stroke-width="20" stroke-linecap="round"/><path d="M284 196h22a38 38 0 0 1 0 76h-30" fill="none" stroke="#e3d6bd" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+        <path d="M82 170h236v60c0 56-44 86-118 86S82 286 82 230z" fill="url(#cupg)"/>
+        <ellipse cx="200" cy="170" rx="118" ry="30" fill="#eadfca"/><ellipse cx="200" cy="172" rx="104" ry="24" fill="#a8683a"/>
+        <path d="M200 186c-26-12-34-20-34-28 0-8 6-12 13-12 7 0 11 4 14 8 3-4 7-8 14-8 7 0 13 4 13 12 0 8-8 16-34 28z" fill="#f6e9d6" transform="translate(0 -4) scale(1 .6) translate(0 118)"/>
+        <path d="M110 240c20 50 60 64 90 64" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="6" stroke-linecap="round"/>
+        <rect x="150" y="238" width="100" height="26" rx="13" fill="#d4673a" opacity=".92"/><text x="200" y="256" text-anchor="middle" font-family="Bricolage Grotesque,sans-serif" font-weight="800" font-size="13" letter-spacing="2" fill="#fffaf0">SAMPLE</text>
+        <g class="steam" fill="none" stroke="#5d5144" stroke-width="5" stroke-linecap="round" opacity=".5"><path d="M150 130c-14-18 14-28 0-48"/><path d="M200 126c-14-18 14-28 0-48"/><path d="M250 130c-14-18 14-28 0-48"/></g>
+      </svg>
+      <svg class="sticker" viewBox="0 0 120 120" role="img" aria-label="Sticker: sample template"><defs><path id="sc" d="M60 60 m-44 0 a44 44 0 1 1 88 0 a44 44 0 1 1 -88 0"/></defs>
+        <circle cx="60" cy="60" r="58" fill="#f5d98b"/><g class="spin"><text font-family="DM Sans,sans-serif" font-weight="700" font-size="11" fill="currentColor"><textPath href="#sc" textLength="270" lengthAdjust="spacing">SAMPLE TEMPLATE · FRESH DAILY · </textPath></text></g><path d="M60 42l5 12 13 1-10 8 4 13-12-7-12 7 4-13-10-8 13-1z" fill="#b34d27"/></svg>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true"><div class="ticker-track">
+  <span>Single-origin beans</span><span>Baked every morning</span><span>Oat &amp; almond milk</span><span>Brunch till 4</span><span>Board games on Sundays</span>
+  <span>Single-origin beans</span><span>Baked every morning</span><span>Oat &amp; almond milk</span><span>Brunch till 4</span><span>Board games on Sundays</span>
+</div></div>
+
+<section class="section" id="about" aria-labelledby="ab-h">
+  <div class="container about">
+    <div class="reveal"><span class="eyebrow">Our story</span><h2 id="ab-h">A little place for <em>big conversations.</em></h2>
+      <p>Pistachio &amp; Pour is a fictional café, made to show how a café website can feel warm, easy and a little playful, with a menu people actually read and a table people actually book.</p>
+      <p>Replace this with your own story: who you are, what you roast and bake, and what a regular visit feels like.</p></div>
+    <div class="feats">
+      <div class="feat reveal"><span class="ic"><svg aria-hidden="true"><use href="#i-cup"/></svg></span><div><h3>The slow bar</h3><p>Single-origin espresso, pour-overs and house syrups made in-house.</p></div></div>
+      <div class="feat reveal" style="--d:.1s"><span class="ic"><svg aria-hidden="true"><use href="#i-bake"/></svg></span><div><h3>Baked fresh</h3><p>Croissants, loaves and cakes from the oven each morning, until they’re gone.</p></div></div>
+      <div class="feat reveal" style="--d:.2s"><span class="ic"><svg aria-hidden="true"><use href="#i-plate"/></svg></span><div><h3>Room to stay</h3><p>Sunny corners, soft seating and plenty of plugs for laptop mornings.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section menu-wrap" id="menu" aria-labelledby="mn-h">
+  <div class="container">
+    <div class="sec-head reveal"><span class="eyebrow">The menu</span><h2 id="mn-h">Sip, snack, <em>stay a while.</em></h2><p>A sample menu showing categories and prices. Dishes and prices are placeholders.</p></div>
+    <div data-tabs class="reveal">
+      <div class="tablist" role="tablist" aria-label="Menu categories">
+        <button class="tab" role="tab" id="t1" aria-controls="p1" aria-selected="true">Coffee</button>
+        <button class="tab" role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1">Brunch</button>
+        <button class="tab" role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1">Bakes</button>
+        <button class="tab" role="tab" id="t4" aria-controls="p4" aria-selected="false" tabindex="-1">Cold &amp; sips</button>
+      </div>
+      <div class="tabpanel" role="tabpanel" id="p1" aria-labelledby="t1"><div class="menu-grid">
+        <div class="item" style="--c:#a9c284"><span class="sw"><svg aria-hidden="true"><use href="#i-cup"/></svg></span><h3>Pistachio latte <span class="tag">Signature</span></h3><span class="price">₹320</span><p>Espresso, pistachio cream, steamed milk.</p></div>
+        <div class="item" style="--c:#f6cdbb"><span class="sw"><svg aria-hidden="true"><use href="#i-cup"/></svg></span><h3>Flat white</h3><span class="price">₹260</span><p>Double ristretto, silky microfoam.</p></div>
+        <div class="item" style="--c:#f5d98b"><span class="sw"><svg aria-hidden="true"><use href="#i-cup"/></svg></span><h3>Cappuccino</h3><span class="price">₹250</span><p>Classic, balanced, generous foam.</p></div>
+        <div class="item" style="--c:#a9c284"><span class="sw"><svg aria-hidden="true"><use href="#i-cup"/></svg></span><h3>Americano</h3><span class="price">₹210</span><p>Double shot, hot water, clean finish.</p></div>
+        <div class="item" style="--c:#f6cdbb"><span class="sw"><svg aria-hidden="true"><use href="#i-cup"/></svg></span><h3>Filter coffee</h3><span class="price">₹200</span><p>South-Indian style, strong and sweet.</p></div>
+        <div class="item" style="--c:#f5d98b"><span class="sw"><svg aria-hidden="true"><use href="#i-cup"/></svg></span><h3>Honey cinnamon latte</h3><span class="price">₹300</span><p>Espresso, local honey, warm cinnamon.</p></div>
+      </div></div>
+      <div class="tabpanel" role="tabpanel" id="p2" aria-labelledby="t2" hidden><div class="menu-grid">
+        <div class="item" style="--c:#a9c284"><span class="sw"><svg aria-hidden="true"><use href="#i-plate"/></svg></span><h3>Avocado sourdough <span class="tag">Veg</span></h3><span class="price">₹420</span><p>Smashed avocado, chilli flakes, poached egg.</p></div>
+        <div class="item" style="--c:#f6cdbb"><span class="sw"><svg aria-hidden="true"><use href="#i-plate"/></svg></span><h3>Shakshuka <span class="tag">Veg</span></h3><span class="price">₹440</span><p>Spiced tomato, baked eggs, toasted bread.</p></div>
+        <div class="item" style="--c:#f5d98b"><span class="sw"><svg aria-hidden="true"><use href="#i-plate"/></svg></span><h3>Fluffy pancakes <span class="tag">Veg</span></h3><span class="price">₹380</span><p>Maple, berries, whipped butter.</p></div>
+        <div class="item" style="--c:#a9c284"><span class="sw"><svg aria-hidden="true"><use href="#i-plate"/></svg></span><h3>Pesto egg croissant</h3><span class="price">₹390</span><p>Scrambled egg, basil pesto, rocket.</p></div>
+        <div class="item" style="--c:#f6cdbb"><span class="sw"><svg aria-hidden="true"><use href="#i-plate"/></svg></span><h3>Mushroom toastie <span class="tag">Veg</span></h3><span class="price">₹360</span><p>Garlic mushrooms, gruyère, thyme.</p></div>
+        <div class="item" style="--c:#f5d98b"><span class="sw"><svg aria-hidden="true"><use href="#i-plate"/></svg></span><h3>Granola bowl <span class="tag">Veg</span></h3><span class="price">₹340</span><p>Greek yoghurt, honey, seasonal fruit.</p></div>
+      </div></div>
+      <div class="tabpanel" role="tabpanel" id="p3" aria-labelledby="t3" hidden><div class="menu-grid">
+        <div class="item" style="--c:#f5d98b"><span class="sw"><svg aria-hidden="true"><use href="#i-bake"/></svg></span><h3>Butter croissant <span class="tag">Veg</span></h3><span class="price">₹180</span><p>Flaky, golden, baked each morning.</p></div>
+        <div class="item" style="--c:#f6cdbb"><span class="sw"><svg aria-hidden="true"><use href="#i-bake"/></svg></span><h3>Almond croissant <span class="tag">Veg</span></h3><span class="price">₹240</span><p>Frangipane filling, toasted flakes.</p></div>
+        <div class="item" style="--c:#a9c284"><span class="sw"><svg aria-hidden="true"><use href="#i-bake"/></svg></span><h3>Pistachio loaf <span class="tag">Veg</span></h3><span class="price">₹230</span><p>Moist crumb, pistachio glaze.</p></div>
+        <div class="item" style="--c:#f5d98b"><span class="sw"><svg aria-hidden="true"><use href="#i-bake"/></svg></span><h3>Basque cheesecake <span class="tag">Veg</span></h3><span class="price">₹310</span><p>Burnt top, creamy centre.</p></div>
+        <div class="item" style="--c:#f6cdbb"><span class="sw"><svg aria-hidden="true"><use href="#i-bake"/></svg></span><h3>Fudgy brownie <span class="tag">Veg</span></h3><span class="price">₹220</span><p>Dark chocolate, sea salt.</p></div>
+        <div class="item" style="--c:#a9c284"><span class="sw"><svg aria-hidden="true"><use href="#i-bake"/></svg></span><h3>Cinnamon roll <span class="tag">Veg</span></h3><span class="price">₹230</span><p>Warm, gooey, cream-cheese icing.</p></div>
+      </div></div>
+      <div class="tabpanel" role="tabpanel" id="p4" aria-labelledby="t4" hidden><div class="menu-grid">
+        <div class="item" style="--c:#a9c284"><span class="sw"><svg aria-hidden="true"><use href="#i-glass"/></svg></span><h3>Iced matcha <span class="tag">Veg</span></h3><span class="price">₹320</span><p>Ceremonial matcha, oat milk, ice.</p></div>
+        <div class="item" style="--c:#f5d98b"><span class="sw"><svg aria-hidden="true"><use href="#i-glass"/></svg></span><h3>Mango cooler</h3><span class="price">₹260</span><p>Mango, lime, mint, soda.</p></div>
+        <div class="item" style="--c:#f6cdbb"><span class="sw"><svg aria-hidden="true"><use href="#i-glass"/></svg></span><h3>Hibiscus iced tea</h3><span class="price">₹240</span><p>Tart, floral, lightly sweet.</p></div>
+        <div class="item" style="--c:#a9c284"><span class="sw"><svg aria-hidden="true"><use href="#i-glass"/></svg></span><h3>Cold brew tonic</h3><span class="price">₹280</span><p>12-hour cold brew, tonic, orange peel.</p></div>
+        <div class="item" style="--c:#f6cdbb"><span class="sw"><svg aria-hidden="true"><use href="#i-glass"/></svg></span><h3>Cold coffee frappe</h3><span class="price">₹300</span><p>Blended, creamy, cocoa dust.</p></div>
+        <div class="item" style="--c:#f5d98b"><span class="sw"><svg aria-hidden="true"><use href="#i-glass"/></svg></span><h3>Hot chocolate</h3><span class="price">₹280</span><p>Thick, dark, with marshmallows.</p></div>
+      </div></div>
+      <p class="menu-note">Sample menu. Prices and dishes are illustrative placeholders.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="gallery" aria-labelledby="gl-h">
+  <div class="container">
+    <div class="sec-head reveal"><span class="eyebrow">Gallery</span><h2 id="gl-h">Little <em>moments.</em></h2><p>Illustrated placeholders. Replace with your own photography.</p></div>
+    <div class="gallery">
+      <figure class="shot tall reveal" style="background:#a9c284">
+        <svg viewBox="0 0 300 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of a cosy corner with an arched window and a potted plant">
+          <path d="M60 330V170a90 90 0 0 1 180 0v160z" fill="#fbf4e8"/><path d="M76 330V172a74 74 0 0 1 148 0v158z" fill="#d9ead0"/><path d="M150 98v232M76 200h148" stroke="#fbf4e8" stroke-width="6"/>
+          <rect x="40" y="330" width="220" height="14" rx="7" fill="#7a4b2b"/><path d="M110 344h80l-10 90h-60z" fill="#d4673a"/><rect x="104" y="334" width="92" height="16" rx="8" fill="#b34d27"/>
+          <g fill="#2f4a35"><ellipse cx="150" cy="270" rx="14" ry="58"/><ellipse cx="120" cy="290" rx="14" ry="48" transform="rotate(-35 120 290)"/><ellipse cx="180" cy="290" rx="14" ry="48" transform="rotate(35 180 290)"/><ellipse cx="100" cy="316" rx="11" ry="34" transform="rotate(-65 100 316)"/><ellipse cx="200" cy="316" rx="11" ry="34" transform="rotate(65 200 316)"/></g>
+        </svg><figcaption>Sunny corner</figcaption></figure>
+      <figure class="shot reveal" style="--d:.08s;background:#f5d98b">
+        <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Top-down illustration of a latte with heart-shaped latte art"><circle cx="200" cy="200" r="150" fill="#fffaf0"/><circle cx="200" cy="200" r="118" fill="#f1e6d0"/><circle cx="200" cy="200" r="100" fill="#a8683a"/><path d="M200 262c-52-34-68-58-68-80 0-20 15-32 33-32 15 0 28 8 35 21 7-13 20-21 35-21 18 0 33 12 33 32 0 22-16 46-68 80z" fill="#f6e9d6"/><rect x="318" y="186" width="70" height="28" rx="14" fill="#fffaf0"/><circle cx="104" cy="104" r="8" fill="#6b4226"/><circle cx="92" cy="122" r="6" fill="#6b4226"/></svg><figcaption>Latte art</figcaption></figure>
+      <figure class="shot reveal" style="--d:.16s;background:#f6cdbb">
+        <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of a golden croissant on a plate"><ellipse cx="200" cy="310" rx="150" ry="26" fill="#fffaf0"/><g fill="#d99a4a"><ellipse cx="200" cy="230" rx="62" ry="64"/><ellipse cx="140" cy="250" rx="38" ry="46" transform="rotate(-28 140 250)"/><ellipse cx="260" cy="250" rx="38" ry="46" transform="rotate(28 260 250)"/><ellipse cx="96" cy="276" rx="26" ry="34" transform="rotate(-55 96 276)"/><ellipse cx="304" cy="276" rx="26" ry="34" transform="rotate(55 304 276)"/></g><g fill="none" stroke="#a8661f" stroke-width="5" stroke-linecap="round"><path d="M164 182c14 22 14 54 0 84M236 182c-14 22-14 54 0 84M112 218c20 16 26 44 18 70M288 218c-20 16-26 44-18 70"/></g><ellipse cx="190" cy="196" rx="30" ry="12" fill="#fff" opacity=".35"/></svg><figcaption>Fresh croissant</figcaption></figure>
+      <figure class="shot reveal" style="--d:.08s;background:#d9ead0">
+        <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of a tall iced drink with a straw and ice cubes"><path d="M130 110h140l-16 230q-2 18-20 18h-68q-18 0-20-18z" fill="#fffaf0" fill-opacity=".7" stroke="#2f4a35" stroke-width="5"/><path d="M138 170h124l-12 168q-1 12-14 12h-72q-13 0-14-12z" fill="#a9c284"/><path d="M138 170h124l-3 38H141z" fill="#f6e9d6"/><g fill="#fff" fill-opacity=".6"><rect x="158" y="228" width="40" height="40" rx="8" transform="rotate(-14 178 248)"/><rect x="206" y="262" width="38" height="38" rx="8" transform="rotate(12 225 281)"/></g><rect x="206" y="40" width="12" height="190" rx="6" fill="#d4673a" transform="rotate(10 212 135)"/></svg><figcaption>Iced matcha</figcaption></figure>
+      <figure class="shot wide reveal" style="background:#26392c">
+        <svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration pattern of roasted coffee beans"><rect width="800" height="400" fill="url(#bean)"/><rect width="800" height="400" fill="#26392c" opacity=".35"/></svg><figcaption>Single-origin beans</figcaption></figure>
+      <figure class="shot reveal" style="--d:.16s;background:#fbe0d3">
+        <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of a slice of layered cake with a strawberry on top"><ellipse cx="200" cy="318" rx="150" ry="24" fill="#fffaf0"/><path d="M96 190l170-30v120L96 300z" fill="#f6cdbb"/><path d="M96 190l170-30 56 34-170 30z" fill="#fffaf0"/><path d="M266 160l56 34v118l-56-32z" fill="#e8a58a"/><path d="M96 232l170-30v14L96 246zM96 268l170-30v12L96 280z" fill="#b34d27" opacity=".55"/><circle cx="214" cy="168" r="24" fill="#d4372a"/><path d="M206 148q8-10 18 0" fill="none" stroke="#2f4a35" stroke-width="6" stroke-linecap="round"/></svg><figcaption>Cake of the day</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="moments" style="padding-top:0" aria-labelledby="mo-h">
+  <div class="container">
+    <div class="sec-head reveal"><span class="eyebrow">Through the week</span><h2 id="mo-h">Something for <em>every mood.</em></h2><p>A sample weekly rhythm. Edit to match your own programming.</p></div>
+    <div class="moments">
+      <article class="moment reveal"><span class="when">Mon – Fri · 8–11 am</span><h3>Laptop mornings</h3><p>Quiet corners, fast Wi-Fi (sample) and a bottomless filter-coffee offer.</p></article>
+      <article class="moment reveal" style="--d:.1s"><span class="when">Saturday · 10 am</span><h3>Latte art jam</h3><p>Watch the baristas pour, or have a go. Beginners welcome.</p></article>
+      <article class="moment reveal" style="--d:.2s"><span class="when">Sunday · 11 am – 4 pm</span><h3>Brunch &amp; board games</h3><p>Long tables, shared plates and a shelf of games.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section reviews-wrap" id="reviews" aria-labelledby="rv-h">
+  <div class="container">
+    <div class="sec-head reveal"><span class="eyebrow">Kind words</span><h2 id="rv-h">What regulars <em>say.</em></h2><p>Placeholder testimonials. Replace with real, permissioned reviews before launch.</p></div>
+    <div class="reviews">
+      <article class="review reveal"><span class="badge-sample">Sample testimonial</span><blockquote>Placeholder: a short, specific line about the coffee, the bakes or the vibe goes here.</blockquote><div class="who"><span class="avatar" aria-hidden="true"></span><span><b>Guest name</b>Review source · date</span></div></article>
+      <article class="review reveal" style="--d:.1s"><span class="badge-sample">Sample testimonial</span><blockquote>Placeholder: swap this for a real quote from a regular, with their permission.</blockquote><div class="who"><span class="avatar" aria-hidden="true"></span><span><b>Guest name</b>Review source · date</span></div></article>
+      <article class="review reveal" style="--d:.2s"><span class="badge-sample">Sample testimonial</span><blockquote>Placeholder: mention a favourite drink, dish or moment. Keep it to two sentences.</blockquote><div class="who"><span class="avatar" aria-hidden="true"></span><span><b>Guest name</b>Review source · date</span></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section dark" id="book" style="margin-top:var(--s8)" aria-labelledby="bk-h">
+  <div class="container book">
+    <div class="copy reveal"><span class="eyebrow">Book a table</span><h2 id="bk-h">Save your <em>favourite spot.</em></h2><p>Tell us when, and how many. On a live site this form would reach your team. Here it is a demo only.</p>
+      <ul><li>Tables held for 15 minutes (sample policy)</li><li>Celebrating? We can add a cake (sample offer)</li><li>Groups of 8+ may need a deposit (sample policy)</li></ul></div>
+    <div class="card reveal" style="--d:.1s">
+      <form class="form" data-demo="done-b" novalidate>
+        <div class="field"><label for="b-name">Name</label><input id="b-name" name="name" type="text" autocomplete="off" placeholder="Guest name" required></div>
+        <div class="field"><label for="b-phone">Phone</label><input id="b-phone" name="phone" type="tel" autocomplete="off" placeholder="+91 00000 00000" required></div>
+        <div class="field"><label for="b-date">Date</label><input id="b-date" name="date" type="date" required></div>
+        <div class="field"><label for="b-time">Time</label><select id="b-time" name="time" required><option value="">Choose a time</option><option>8:30 am</option><option>10:00 am</option><option>11:30 am</option><option>1:00 pm</option><option>4:00 pm</option><option>6:00 pm</option></select></div>
+        <div class="field"><label for="b-guests">Guests</label><select id="b-guests" name="guests" required><option value="">How many?</option><option>1–2</option><option>3–4</option><option>5–6</option><option>7–10</option></select></div>
+        <div class="field"><label for="b-occ">Occasion</label><select id="b-occ" name="occasion"><option>Just coffee</option><option>Brunch</option><option>Birthday</option><option>Work meeting</option></select></div>
+        <div class="field full"><label for="b-notes">Notes (optional)</label><textarea id="b-notes" name="notes" placeholder="Allergies, high chair, window seat…"></textarea></div>
+        <button class="btn btn-primary" type="submit">Request a table</button>
+        <p class="form-note">Demo form. Nothing is sent, saved or shared.</p>
+      </form>
+      <div class="form-done" id="done-b" role="status" aria-live="polite" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12.500l3 3 5-6"/></svg><div><strong>This is a demo form</strong><p>Nothing was sent. On a live site, your table request would reach the team here.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="visit" aria-labelledby="vs-h">
+  <div class="container">
+    <div class="sec-head reveal"><span class="eyebrow">Visit</span><h2 id="vs-h">Come <em>say hi.</em></h2></div>
+    <div class="visit">
+      <div class="info reveal">
+        <div><h3>Address</h3><p>Sample address line<br>Dwarka Expressway, Gurugram, Haryana</p></div>
+        <div><h3>Contact</h3><p>+91 00000 00000<br>hello@your-domain.example</p></div>
+        <div><h3>Hours (sample)</h3><ul class="hours"><li><span>Mon – Fri</span><span>8:00 am – 9:00 pm</span></li><li><span>Saturday</span><span>9:00 am – 10:00 pm</span></li><li><span>Sunday</span><span>9:00 am – 8:00 pm</span></li></ul></div>
+      </div>
+      <div class="map reveal" style="--d:.1s"><div class="map-fallback" aria-hidden="true">Map loads here</div>
+        <iframe title="Map of Dwarka Expressway, Gurugram (generic location)" src="https://www.google.com/maps?q=Dwarka+Expressway,+Gurugram&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer"><div class="container"><p><strong>Pistachio &amp; Pour Café</strong> · fictional brand</p><p>Sample website template by [Your brand]. Placeholder content.</p></div></footer>
+<script src="script.js"></script>
+</body>
+</html>

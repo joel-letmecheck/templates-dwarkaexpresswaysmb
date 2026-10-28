@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ember &amp; Oak Taproom — Sample restaurant website template</title>
+<meta name="description" content="Sample restaurant, pub and lounge website template. Placeholder content only.">
+<meta name="theme-color" content="#12100e">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2312100e'/%3E%3Cpath d='M16 27c-5 0-8-3.3-8-7.4 0-4 3-6.2 4.200-10.100 1.800 1.400 2.300 3 2.300 4.400 1.200-.9 1.800-2.400 1.600-4.700 3.300 2.400 5.900 5.300 5.900 9.800 0 4.400-3.100 8-6 8z' fill='%23e8622c'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="top">
+  <div class="container nav-bar">
+    <a class="brand" href="#top" aria-label="Ember &amp; Oak Taproom, back to top">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="none" stroke="#e8622c" stroke-width="1.5"/><path d="M16 26c-4.600 0-7.200-3-7.200-6.700 0-3.600 2.700-5.600 3.800-9.100 1.600 1.300 2.100 2.700 2.100 4 1.100-.8 1.600-2.200 1.500-4.200 3 2.100 5.300 4.800 5.300 8.800 0 4-2.800 7.200-5.500 7.200z" fill="#e8622c"/></svg>
+      <span><b>Ember &amp; Oak</b><small>Taproom</small></span>
+    </a>
+    <nav class="nav-links" id="menu-nav" aria-label="Primary">
+      <a href="#about">Story</a><a href="#menu">Menu</a><a href="#gallery">Gallery</a><a href="#events">Events</a><a href="#reviews">Reviews</a><a href="#visit">Visit</a>
+      <a class="btn btn-primary mobile-cta" href="#reserve">Reserve a table</a>
+    </nav>
+    <a class="btn btn-primary btn-sm nav-cta" href="#reserve">Reserve a table</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-nav" aria-label="Open menu"><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" aria-labelledby="h1">
+  <div class="container">
+    <div>
+      <p class="eyebrow reveal">Craft taps · Wood-fired plates · Dwarka Expressway</p>
+      <h1 id="h1" class="reveal" style="--d:.08s">Slow fire.<em>Cold pour.</em>Good company.</h1>
+      <p class="lead reveal" style="--d:.18s">A neighbourhood taproom built around an oak-fired grill, twelve rotating taps and long, unhurried evenings. This is a sample website template, so every name, dish and price here is placeholder content.</p>
+      <div class="cta reveal" style="--d:.28s"><a class="btn btn-primary" href="#reserve">Reserve a table</a><a class="btn btn-ghost" href="#menu">See the menu</a></div>
+      <div class="hero-meta reveal" style="--d:.38s"><span>Open daily</span><span>Live sets on weekends</span><span>Groups welcome</span></div>
+    </div>
+    <svg class="emblem" viewBox="0 0 400 400" role="img" aria-label="Decorative emblem: a flame inside a rotating ring of text">
+    <defs><path id="circ" d="M200 200 m-170 0 a170 170 0 1 1 340 0 a170 170 0 1 1 -340 0"/>
+      <radialGradient id="fg" cx="50%" cy="80%" r="70%"><stop offset="0" stop-color="#ffd27a"/><stop offset=".55" stop-color="#e8622c"/><stop offset="1" stop-color="#9c2f12"/></radialGradient></defs>
+    <circle cx="200" cy="200" r="196" fill="none" stroke="#f5ead9" stroke-opacity=".18"/>
+    <circle cx="200" cy="200" r="132" fill="#e8622c" fill-opacity=".08" stroke="#f5ead9" stroke-opacity=".18"/>
+    <g class="ring"><text font-family="Manrope,sans-serif" font-size="19" font-weight="700" letter-spacing="7.400" fill="#f5ead9" fill-opacity=".8"><textPath href="#circ">SAMPLE TEMPLATE · WOOD-FIRED · CRAFT TAPS · LATE NIGHTS · </textPath></text></g>
+    <g class="flame"><path d="M200 300c-52 0-82-34-82-76 0-42 32-64 44-104 18 15 24 30 24 46 12-9 18-25 16-48 34 24 60 55 60 100 0 46-32 82-62 82z" fill="url(#fg)"/><path d="M200 300c-26 0-40-17-40-38 0-22 17-33 24-52 10 9 12 17 11 25 7-5 10-13 9-24 17 14 28 28 28 50 0 24-14 39-32 39z" fill="#ffd27a" fill-opacity=".92"/></g>
+  </svg>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="marquee-track">
+  <span>Oak-fired</span><span>Twelve taps</span><span>Smoked cocktails</span><span>Late kitchen</span><span>Live acoustic</span><span>Big-screen match nights</span>
+  <span>Oak-fired</span><span>Twelve taps</span><span>Smoked cocktails</span><span>Late kitchen</span><span>Live acoustic</span><span>Big-screen match nights</span>
+</div></div>
+
+<section class="section" id="about" aria-labelledby="about-h">
+  <div class="container about">
+    <div class="about-copy reveal">
+      <span class="eyebrow">Our story</span>
+      <h2 id="about-h">Built around the fire, <em>poured for the table.</em></h2>
+      <p>Ember &amp; Oak is a fictional taproom used to show what a restaurant, pub or lounge website can look like: clear menu, easy table requests, and an evening-ready mood.</p>
+      <p>Swap in your own story here. Two short paragraphs about the kitchen, the drinks and the room are usually enough.</p>
+    </div>
+    <ul class="pillars">
+      <li class="pillar reveal" style="--d:.05s"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 28c-5 0-8-3.300-8-7.400 0-4 3-6.200 4.200-10.100 1.800 1.400 2.300 3 2.300 4.400 1.200-.9 1.800-2.400 1.600-4.700 3.300 2.400 5.900 5.300 5.900 9.800 0 4.400-3.100 8-6 8z"/></svg><h3>The oak grill</h3><p>Short, honest plates cooked over live wood. Smoke where it belongs, nowhere else.</p></li>
+      <li class="pillar reveal" style="--d:.15s"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h14l-1.500 20a2 2 0 0 1-2 1.800h-7a2 2 0 0 1-2-1.800z"/><path d="M9.500 11h13M13 16v6M19 16v6"/></svg><h3>Rotating taps</h3><p>A changing line-up of lagers, ales and ciders, plus a short list of classic cocktails.</p></li>
+      <li class="pillar reveal" style="--d:.25s"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 25V14a11 11 0 0 1 22 0v11"/><path d="M5 25h22M11 25v-7a5 5 0 0 1 10 0v7"/></svg><h3>The room</h3><p>Warm lighting, deep booths and a long bar. Made for first dates, team nights and match days.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section menu-wrap" id="menu" aria-labelledby="menu-h">
+  <div class="container">
+    <div class="sec-head reveal"><span class="eyebrow">The menu</span><h2 id="menu-h">Eat, sip, <em>repeat.</em></h2><p>A sample menu to show how categories and prices can be laid out. Dishes and prices are placeholders.</p></div>
+    <div data-tabs class="reveal">
+      <div class="tablist" role="tablist" aria-label="Menu categories">
+        <button class="tab" role="tab" id="t1" aria-controls="p1" aria-selected="true">Small plates</button>
+        <button class="tab" role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1">From the fire</button>
+        <button class="tab" role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1">On tap</button>
+        <button class="tab" role="tab" id="t4" aria-controls="p4" aria-selected="false" tabindex="-1">Cocktails</button>
+      </div>
+      <div class="tabpanel" role="tabpanel" id="p1" aria-labelledby="t1"><div class="menu-list">
+        <div class="dish"><h3>Smoked paneer skewers <span class="tag">Veg</span></h3><span class="price">₹420</span><p>Charred peppers, mint-chilli chutney, lime.</p></div>
+        <div class="dish"><h3>Peri-peri wings</h3><span class="price">₹480</span><p>Twice-cooked, finished over embers, house ranch.</p></div>
+        <div class="dish"><h3>Corn &amp; jalapeño fritters <span class="tag">Veg</span></h3><span class="price">₹360</span><p>Smoked chilli mayo, spring onion.</p></div>
+        <div class="dish"><h3>Truffle masala fries <span class="tag">Veg</span></h3><span class="price">₹340</span><p>Parmesan, curry leaf, garlic aioli.</p></div>
+        <div class="dish"><h3>Burrata &amp; roasted tomato toast <span class="tag">Veg</span></h3><span class="price">₹520</span><p>Sourdough, basil oil, balsamic.</p></div>
+        <div class="dish"><h3>Crispy calamari</h3><span class="price">₹540</span><p>Lemon pepper, charred lime, tartare.</p></div>
+      </div></div>
+      <div class="tabpanel" role="tabpanel" id="p2" aria-labelledby="t2" hidden><div class="menu-list">
+        <div class="dish"><h3>Oak-fired chicken, half</h3><span class="price">₹690</span><p>Brined overnight, herb butter, charred lemon.</p></div>
+        <div class="dish"><h3>Lamb seekh flatbread</h3><span class="price">₹620</span><p>Pickled onion, yoghurt, coriander.</p></div>
+        <div class="dish"><h3>Wild mushroom flatbread <span class="tag">Veg</span></h3><span class="price">₹560</span><p>Thyme, caramelised onion, smoked cheese.</p></div>
+        <div class="dish"><h3>The Ember smash burger</h3><span class="price">₹520</span><p>Double patty, cheddar, pickles, brioche.</p></div>
+        <div class="dish"><h3>Grilled fish of the day</h3><span class="price">₹780</span><p>Citrus butter, charred greens.</p></div>
+        <div class="dish"><h3>Fire-roasted cauliflower <span class="tag">Veg</span></h3><span class="price">₹480</span><p>Tahini, pomegranate, toasted seeds.</p></div>
+      </div></div>
+      <div class="tabpanel" role="tabpanel" id="p3" aria-labelledby="t3" hidden><div class="menu-list">
+        <div class="dish"><h3>Taproom Amber</h3><span class="price">₹380</span><p>Malty, caramel finish. 4.8% (sample).</p></div>
+        <div class="dish"><h3>Hazy Mile IPA</h3><span class="price">₹420</span><p>Tropical, soft and juicy. 6.0% (sample).</p></div>
+        <div class="dish"><h3>Oak Barrel Stout</h3><span class="price">₹440</span><p>Roasted coffee, cocoa, vanilla. 5.4% (sample).</p></div>
+        <div class="dish"><h3>Golden Hour Lager</h3><span class="price">₹340</span><p>Crisp, clean, dangerously easy. 4.5% (sample).</p></div>
+        <div class="dish"><h3>Wheat &amp; Orange Peel</h3><span class="price">₹380</span><p>Cloudy, citrusy, light body. 4.9% (sample).</p></div>
+        <div class="dish"><h3>Dry Apple Cider</h3><span class="price">₹360</span><p>Crisp apples, bright finish. 5.0% (sample).</p></div>
+      </div></div>
+      <div class="tabpanel" role="tabpanel" id="p4" aria-labelledby="t4" hidden><div class="menu-list">
+        <div class="dish"><h3>Ember old fashioned</h3><span class="price">₹640</span><p>Bourbon, smoked demerara, orange oil.</p></div>
+        <div class="dish"><h3>Smoked pineapple margarita</h3><span class="price">₹580</span><p>Tequila, charred pineapple, chilli salt.</p></div>
+        <div class="dish"><h3>Oak &amp; honey sour</h3><span class="price">₹560</span><p>Whisky, honey, lemon, egg white.</p></div>
+        <div class="dish"><h3>Midnight negroni</h3><span class="price">₹600</span><p>Gin, bitter, vermouth, cocoa.</p></div>
+        <div class="dish"><h3>Ember cooler <span class="tag">Zero proof</span></h3><span class="price">₹360</span><p>Pomegranate, mint, ginger, soda.</p></div>
+        <div class="dish"><h3>Cold brew tonic <span class="tag">Zero proof</span></h3><span class="price">₹320</span><p>Cold brew, tonic, orange peel.</p></div>
+      </div></div>
+      <p class="menu-note">Sample menu. Prices and dishes are illustrative placeholders.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="gallery" aria-labelledby="gal-h">
+  <div class="container">
+    <div class="sec-head reveal"><span class="eyebrow">Gallery</span><h2 id="gal-h">The mood, <em>in pieces.</em></h2><p>Illustrated placeholders. Replace with your own photography.</p></div>
+    <div class="gallery">
+      <figure class="shot tall reveal" style="background:linear-gradient(160deg,#3a2210,#12100e)">
+        <svg viewBox="0 0 300 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of two pint glasses, one amber ale and one dark stout">
+          <defs><linearGradient id="am" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6b84a"/><stop offset="1" stop-color="#c2641b"/></linearGradient><linearGradient id="st" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3b2314"/><stop offset="1" stop-color="#150b06"/></linearGradient></defs>
+          <path d="M70 150h110l-12 230q-1 12-13 12H95q-12 0-13-12z" fill="url(#am)"/><path d="M66 150q0-34 28-34 10-18 30-14 22-6 36 14 24 2 24 30 0 8-8 8H74q-8 0-8-4z" fill="#fff6df"/>
+          <path d="M190 220h80l-9 160q-1 12-12 12h-38q-11 0-12-12z" fill="url(#st)"/><path d="M186 220q0-24 20-24 8-12 22-9 16-3 26 9 18 2 18 22 0 4-6 4h-74q-6 0-6-2z" fill="#d8c09a"/>
+          <g fill="#fff" fill-opacity=".5"><circle cx="105" cy="300" r="3"/><circle cx="130" cy="260" r="2.500"/><circle cx="148" cy="330" r="3.500"/><circle cx="120" cy="350" r="2"/><circle cx="140" cy="200" r="2"/></g>
+          <rect x="30" y="392" width="240" height="8" rx="4" fill="#f5ead9" fill-opacity=".12"/>
+        </svg><figcaption>Amber &amp; stout</figcaption></figure>
+      <figure class="shot reveal" style="--d:.08s;background:radial-gradient(70% 70% at 50% 100%,#e8622c,#2a1208 70%)">
+        <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of flames over a grill"><path d="M200 330c-60 0-92-40-92-88 0-50 38-74 52-120 20 16 28 34 28 52 14-10 20-28 18-54 40 28 68 62 68 114 0 54-34 96-74 96z" fill="#f39a3d"/><path d="M200 330c-30 0-46-20-46-44 0-26 20-38 28-60 12 10 14 20 13 29 8-6 12-15 10-28 20 16 32 32 32 58 0 28-16 45-37 45z" fill="#ffd98a"/><g stroke="#0c0907" stroke-width="8" stroke-linecap="round"><path d="M60 345h280M60 370h280"/></g></svg><figcaption>Live fire</figcaption></figure>
+      <figure class="shot reveal" style="--d:.16s;background:linear-gradient(135deg,#40281a,#17110c)">
+        <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of a round flatbread with toppings on a wooden board"><rect x="40" y="70" width="320" height="260" rx="30" fill="#6a4426"/><circle cx="200" cy="200" r="104" fill="#e0aa62"/><circle cx="200" cy="200" r="88" fill="#b8431f"/><circle cx="200" cy="200" r="82" fill="#e9c47f" fill-opacity=".85"/><g fill="#9b2f17"><circle cx="165" cy="175" r="13"/><circle cx="230" cy="168" r="13"/><circle cx="205" cy="226" r="13"/><circle cx="160" cy="232" r="11"/><circle cx="244" cy="226" r="11"/></g><g fill="#3e7d3a"><ellipse cx="190" cy="198" rx="10" ry="5" transform="rotate(30 190 198)"/><ellipse cx="228" cy="200" rx="10" ry="5" transform="rotate(-30 228 200)"/><ellipse cx="200" cy="150" rx="10" ry="5" transform="rotate(80 200 150)"/></g></svg><figcaption>Flatbreads</figcaption></figure>
+      <figure class="shot wide reveal" style="background:linear-gradient(180deg,#24180f,#0f0c09)">
+        <svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of a back-bar shelf with rows of bottles and warm lights"><g fill="#f0b45a" fill-opacity=".14"><circle cx="150" cy="60" r="70"/><circle cx="650" cy="70" r="80"/></g><rect x="0" y="180" width="800" height="6" fill="#6a4426"/><rect x="0" y="330" width="800" height="6" fill="#6a4426"/>
+          <g id="bt"><rect x="60" y="88" width="30" height="92" rx="6" fill="#2f5d4c"/><rect x="69" y="62" width="12" height="30" rx="3" fill="#2f5d4c"/><rect x="110" y="104" width="34" height="76" rx="6" fill="#a8552a"/><rect x="120" y="76" width="14" height="32" rx="3" fill="#a8552a"/><rect x="164" y="80" width="28" height="100" rx="6" fill="#d9a24a"/><rect x="171" y="52" width="14" height="32" rx="3" fill="#d9a24a"/><rect x="212" y="96" width="36" height="84" rx="8" fill="#5b3a7a"/><rect x="223" y="68" width="14" height="32" rx="3" fill="#5b3a7a"/></g>
+          <use href="#bt" x="260"/><use href="#bt" x="520"/>
+          <use href="#bt" x="130" y="150"/><use href="#bt" x="390" y="150"/><use href="#bt" x="-130" y="150"/>
+        </svg><figcaption>The back bar</figcaption></figure>
+      <figure class="shot reveal" style="--d:.08s;background:linear-gradient(200deg,#3b1a12,#12100e)">
+        <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of a cocktail in a coupe glass with an orange twist"><path d="M110 150h180q0 70-90 90-90-20-90-90z" fill="#f2a65a" fill-opacity=".95"/><path d="M110 150h180" stroke="#f5ead9" stroke-width="6" stroke-linecap="round"/><rect x="195" y="238" width="10" height="90" fill="#f5ead9" fill-opacity=".75"/><ellipse cx="200" cy="332" rx="60" ry="9" fill="#f5ead9" fill-opacity=".75"/><circle cx="262" cy="140" r="26" fill="#e8622c"/><circle cx="262" cy="140" r="19" fill="#ffc77a"/><path d="M262 121v38M243 140h38M249 127l26 26M275 127l-26 26" stroke="#e8622c" stroke-width="2"/></svg><figcaption>Smoked cocktails</figcaption></figure>
+      <figure class="shot reveal" style="--d:.16s;background:linear-gradient(160deg,#1f3a35,#0f0d0b)">
+        <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of a row of beer tap handles"><rect x="40" y="180" width="320" height="22" rx="8" fill="#a9a29a"/><g stroke="#0e0c0a" stroke-width="3"><rect x="62" y="70" width="28" height="110" rx="10" fill="#e8622c"/><rect x="118" y="70" width="28" height="110" rx="10" fill="#f0b45a"/><rect x="174" y="70" width="28" height="110" rx="10" fill="#3f8f7a"/><rect x="230" y="70" width="28" height="110" rx="10" fill="#d8c09a"/><rect x="286" y="70" width="28" height="110" rx="10" fill="#8a4d9c"/></g><g fill="#a9a29a"><rect x="70" y="202" width="12" height="40" rx="4"/><rect x="126" y="202" width="12" height="40" rx="4"/><rect x="182" y="202" width="12" height="40" rx="4"/><rect x="238" y="202" width="12" height="40" rx="4"/><rect x="294" y="202" width="12" height="40" rx="4"/></g></svg><figcaption>Twelve taps</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section events-wrap" id="events" aria-labelledby="ev-h">
+  <div class="container">
+    <div class="sec-head reveal"><span class="eyebrow">Weekly rhythm</span><h2 id="ev-h">Something on <em>every night.</em></h2><p>A sample weekly schedule. Edit to match your own programming.</p></div>
+    <ul class="week reveal">
+      <li><span class="day">Tue</span><div><h3>Quiz &amp; pitchers</h3><p>Teams of up to six. Bragging rights and a tab to win.</p></div><span class="time">8:00 pm</span></li>
+      <li><span class="day">Thu</span><div><h3>Tap takeover</h3><p>A guest brewery, three new pours, snacks to match.</p></div><span class="time">7:00 pm</span></li>
+      <li><span class="day">Fri</span><div><h3>Live acoustic</h3><p>Local artists, easy volume, full kitchen.</p></div><span class="time">8:30 pm</span></li>
+      <li><span class="day">Sat</span><div><h3>DJ &amp; late kitchen</h3><p>Dance floor opens after ten, grill stays on.</p></div><span class="time">9:30 pm</span></li>
+      <li><span class="day">Sun</span><div><h3>Match day &amp; brunch</h3><p>Big screens, bottomless-style offers (sample).</p></div><span class="time">12:00 pm</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="reviews" aria-labelledby="rev-h">
+  <div class="container">
+    <div class="sec-head reveal"><span class="eyebrow">Guest love</span><h2 id="rev-h">What guests <em>say.</em></h2><p>Placeholder testimonials. Replace with real, permissioned reviews before launch.</p></div>
+    <div class="reviews">
+      <article class="review reveal"><span class="badge-sample">Sample testimonial</span><blockquote>“Placeholder: a short, specific line about the food, the service or the evening goes here.”</blockquote><div class="who"><span class="avatar" aria-hidden="true"></span><span><b>Guest name</b>Review source · date</span></div></article>
+      <article class="review reveal" style="--d:.1s"><span class="badge-sample">Sample testimonial</span><blockquote>“Placeholder: swap this for a real quote from a regular. Keep it to two sentences.”</blockquote><div class="who"><span class="avatar" aria-hidden="true"></span><span><b>Guest name</b>Review source · date</span></div></article>
+      <article class="review reveal" style="--d:.2s"><span class="badge-sample">Sample testimonial</span><blockquote>“Placeholder: mention a standout dish, drink or night, with the guest’s permission.”</blockquote><div class="who"><span class="avatar" aria-hidden="true"></span><span><b>Guest name</b>Review source · date</span></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section reserve-wrap" id="reserve" aria-labelledby="res-h">
+  <div class="container reserve">
+    <div class="reserve-copy reveal"><span class="eyebrow">Reserve</span><h2 id="res-h">Save us <em>a seat.</em></h2><p>Tell us when and how many. On a live site this form would reach your team; here it is a demo only.</p>
+      <ul><li>Tables held for 15 minutes (sample policy)</li><li>Groups of 8+ can request a private corner</li><li>Tell us about birthdays, allergies or match-day plans</li></ul></div>
+    <div class="reserve-card reveal" style="--d:.1s">
+      <form class="form" data-demo="done-r" novalidate>
+        <div class="field"><label for="r-name">Name</label><input id="r-name" name="name" type="text" autocomplete="off" placeholder="Guest name" required></div>
+        <div class="field"><label for="r-phone">Phone</label><input id="r-phone" name="phone" type="tel" autocomplete="off" placeholder="+91 00000 00000" required></div>
+        <div class="field"><label for="r-date">Date</label><input id="r-date" name="date" type="date" required></div>
+        <div class="field"><label for="r-time">Time</label><select id="r-time" name="time" required><option value="">Choose a time</option><option>12:00 pm</option><option>1:30 pm</option><option>7:00 pm</option><option>8:30 pm</option><option>10:00 pm</option></select></div>
+        <div class="field"><label for="r-guests">Guests</label><select id="r-guests" name="guests" required><option value="">How many?</option><option>1–2</option><option>3–4</option><option>5–6</option><option>7–10</option><option>10+</option></select></div>
+        <div class="field"><label for="r-occ">Occasion</label><select id="r-occ" name="occasion"><option>Just dinner and drinks</option><option>Birthday</option><option>Team night</option><option>Match day</option></select></div>
+        <div class="field full"><label for="r-notes">Notes (optional)</label><textarea id="r-notes" name="notes" placeholder="Allergies, seating preference, anything we should know"></textarea></div>
+        <button class="btn btn-primary" type="submit">Request a table</button>
+        <p class="form-note">Demo form. Nothing is sent, saved or shared.</p>
+      </form>
+      <div class="form-done" id="done-r" role="status" aria-live="polite" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12.500l3 3 5-6"/></svg><div><strong>This is a demo form</strong><p>Nothing was sent. On a live site, your reservation request would reach the team here.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="visit" aria-labelledby="vis-h">
+  <div class="container">
+    <div class="sec-head reveal"><span class="eyebrow">Visit</span><h2 id="vis-h">Find <em>the fire.</em></h2></div>
+    <div class="visit">
+      <div class="visit-info reveal">
+        <div><h3>Address</h3><p>Sample address line<br>Dwarka Expressway, Gurugram, Haryana</p></div>
+        <div><h3>Contact</h3><p>+91 00000 00000<br>hello@your-domain.example</p></div>
+        <div><h3>Hours (sample)</h3><ul class="hours"><li><span>Mon – Thu</span><span>12:00 pm – 12:00 am</span></li><li><span>Fri – Sat</span><span>12:00 pm – 1:00 am</span></li><li><span>Sunday</span><span>11:00 am – 11:30 pm</span></li></ul></div>
+      </div>
+      <div class="map reveal" style="--d:.1s"><div class="map-fallback" aria-hidden="true">Map loads here</div>
+        <iframe title="Map of Dwarka Expressway, Gurugram (generic location)" src="https://www.google.com/maps?q=Dwarka+Expressway,+Gurugram&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer"><div class="container"><p><strong>Ember &amp; Oak Taproom</strong> · fictional brand</p><p>Sample website template by [Your brand]. Placeholder content.</p></div></footer>
+<script src="script.js"></script>
+</body>
+</html>
