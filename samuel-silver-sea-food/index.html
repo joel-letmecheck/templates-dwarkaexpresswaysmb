@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Samuel Silver Sea Food | INA Market, New Delhi</title>
+<meta name="description" content="Samuel Silver Sea Food, fresh seafood at Shop 203, INA Market, Sri Aurobindo Marg, New Delhi. Sample demo page.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#07151b">
+<style>
+:root{--accent:#3cc4cf;--bg:#07151b;--card:#0e222b;--fg:#eaf6f7;--muted:#9cb7bc;--line:#1f3d48;--wa:#25d366}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg);padding-bottom:76px}
+a{color:inherit}
+h1,h2,h3{line-height:1.15;margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding:0 18px}
+.top{position:sticky;top:0;z-index:20;background:rgba(7,21,27,.94);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:56px}
+.brand{font-weight:700;letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:999px;border:1px solid var(--line);text-decoration:none;font-weight:700;font-size:1rem;background:transparent;color:var(--fg);cursor:pointer;font-family:inherit}
+.btn.wa{background:var(--wa);border-color:var(--wa);color:#06260f}
+.btn.sm{min-height:38px;padding:0 14px;font-size:.88rem;white-space:nowrap}
+.btn:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.hero{padding:52px 0 44px;background:radial-gradient(110% 80% at 85% 0%,rgba(255,255,255,.07),transparent 60%),linear-gradient(155deg,var(--accent) -60%,#0c2f3a 30%,var(--bg) 78%)}
+.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;color:var(--muted);margin:0 0 12px}
+.hero h1{font-size:clamp(2rem,8vw,3.6rem);letter-spacing:-.01em;max-width:16ch}
+.tag{margin:14px 0 0;font-size:1.1rem;color:#cfe9ec;max-width:36ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 0;padding:0;list-style:none}
+.chips li{border:1px solid var(--line);background:rgba(0,0,0,.25);border-radius:999px;padding:6px 14px;font-size:.9rem}
+.chips b{color:var(--accent)}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+section{padding:40px 0;border-top:1px solid var(--line)}
+section h2{font-size:1.6rem;margin-bottom:6px}
+.sub{color:var(--muted);margin:0 0 22px;max-width:60ch}
+.grid{display:grid;gap:12px;grid-template-columns:1fr}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.card h3{font-size:1.05rem;margin-bottom:6px}
+.card p{margin:0;color:var(--muted)}
+.menu h3{font-size:1.1rem;margin:26px 0 8px;color:var(--accent)}
+.menu h3:first-child{margin-top:0}
+.item{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px dashed var(--line)}
+.item b{display:block}
+.item span{color:var(--muted);font-size:.95rem}
+.item em{font-style:normal;white-space:nowrap;font-weight:700}
+.note{font-size:.85rem;color:var(--muted);margin:14px 0 0}
+.gal{display:grid;gap:10px;grid-template-columns:repeat(2,1fr)}
+.ph{aspect-ratio:4/3;border-radius:14px;border:1px solid var(--line);display:flex;align-items:flex-end;padding:10px;font-size:.78rem;color:rgba(255,255,255,.75)}
+.visit{display:grid;gap:22px}
+table{border-collapse:collapse;width:100%}
+td{padding:8px 0;border-bottom:1px solid var(--line)}
+td:last-child{text-align:right;color:var(--muted)}
+.addr{font-size:1.05rem;margin:0 0 14px}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.chat{max-width:440px;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#06100f}
+.chat-h{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:12px 14px;background:#0c1d25;border-bottom:1px solid var(--line);font-size:.9rem}
+.badge{background:#fff;color:#111;border-radius:6px;padding:2px 8px;font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.log{min-height:300px;padding:14px;display:flex;flex-direction:column;gap:8px}
+.msg{max-width:84%;padding:9px 12px;border-radius:14px;font-size:.95rem;position:relative}
+.msg small{display:block;margin-top:3px;font-size:.7rem;opacity:.7;text-align:right}
+.msg.user{align-self:flex-end;background:#dcf8c6;color:#14210d;border-bottom-right-radius:4px}
+.msg.bot{align-self:flex-start;background:#16303a;border-bottom-left-radius:4px}
+.msg.sys{align-self:center;background:transparent;border:1px dashed var(--line);color:var(--muted);font-size:.82rem;text-align:center;max-width:94%}
+.dots{align-self:flex-start;color:var(--muted);font-size:.85rem;padding:4px 12px}
+.chat-f{padding:12px 14px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:.8rem;color:var(--muted)}
+footer{padding:28px 0 36px;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}
+footer p{margin:0 0 8px;overflow-wrap:anywhere}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(7,21,27,.96);border-top:1px solid var(--line)}
+.bar .btn{width:100%}
+@media(min-width:720px){
+ .grid.c3{grid-template-columns:repeat(3,1fr)}
+ .gal{grid-template-columns:repeat(3,1fr)}
+ .visit{grid-template-columns:1fr 1fr}
+ .hero{padding:96px 0 80px}
+ body{padding-bottom:0}.bar{display:none}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.sample{display:inline-block;background:#ffd24a;color:#2a1f00;border-radius:6px;padding:1px 7px;font-size:.72rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;vertical-align:middle}
+.tiles{display:grid;gap:12px;grid-template-columns:repeat(2,1fr)}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 14px;text-align:center}
+.tile svg{width:64px;height:40px;display:block;margin:0 auto 8px;color:var(--accent)}
+.tile h3{font-size:1rem;margin-bottom:4px}.tile p{margin:0;color:var(--muted);font-size:.88rem}
+.rate{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.big{font-size:3.4rem;font-weight:800;line-height:1;color:var(--accent)}
+.stars{display:flex;gap:3px}.stars svg{width:24px;height:24px}
+.map{width:100%;height:260px;border:1px solid var(--line);border-radius:14px;margin-top:16px;background:var(--card)}
+.wave{display:block;width:100%;height:36px;color:var(--bg);margin-top:-1px}
+@media(min-width:720px){.tiles{grid-template-columns:repeat(3,1fr)}}
+.msg.bot{white-space:pre-line}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <span class="brand">Samuel Silver Sea Food</span>
+  <a class="btn wa sm" href="#night" data-demo>Order on WhatsApp</a>
+</div></header>
+
+<main>
+<div class="hero"><div class="wrap">
+  <p class="eyebrow">INA Market &middot; Sri Aurobindo Marg, New Delhi</p>
+  <h1>Taaza seafood, ghar tak.</h1>
+  <p class="tag">Samuel Silver Sea Food: fresh fish, prawns, lobster, crab and squid, plus frozen kebabs and sausages. Phone order aur home delivery available.</p>
+  <ul class="chips">
+    <li><b>4.1</b> on Google, about 136 reviews</li>
+    <li>Open daily 9 AM &ndash; 9 PM</li>
+    <li>Delivery Rs 150 per 2 km</li>
+  </ul>
+  <div class="cta">
+    <a class="btn wa" href="#night" data-demo>Order on WhatsApp</a>
+    <a class="btn" href="tel:+919891307559">Call 98913 07559</a>
+  </div>
+</div></div>
+
+<section id="night"><div class="wrap">
+  <h2>Raat 10:30 baje bhi jawab, turant</h2>
+  <p class="sub">Customers aksar shop band hone ke baad rate puchhte hain. Yeh demo dikhata hai ki ek automatic WhatsApp reply raat ko prawns ka enquiry kaise sambhal sakta hai. Rates sirf <span class="sample">sample</span> hain.</p>
+  <div class="chat" id="chat">
+    <div class="chat-h"><span>Samuel Silver Sea Food auto-reply</span><span class="badge">Demo</span></div>
+    <div class="log" id="log" aria-live="polite" aria-label="Simulated WhatsApp conversation"></div>
+    <div class="chat-f"><span>Demo of the auto-reply. Scripted; no real bot is connected, nothing is sent.</span><button class="btn sm" id="play" type="button">Play demo</button></div>
+  </div>
+  <script type="application/json" id="demo-script">[{"who": "sys", "text": "Demo: raat ke 10:30 baj chuke hain. Shop band hai (9am-9pm) aur staff ghar ja chuka hai."}, {"who": "user", "text": "aaj prawns ka rate kya hai? kal subah 1kg deliver ho jayega?", "time": "10:30 pm"}, {"who": "bot", "text": "Namaste! Samuel Silver Sea Food ka auto-reply (demo). Shop abhi band hai, par main madad kar sakta hoon.", "time": "10:30 pm"}, {"who": "bot", "text": "Prawns ke rate (SAMPLE rates, not actual price):\n• Medium prawns: Rs 000/kg (sample)\n• Large prawns: Rs 000/kg (sample)\nAsli rate kal subah shop confirm karega.", "time": "10:30 pm"}, {"who": "bot", "text": "Delivery: Rs 150 per 2 km. Kal subah 1kg prawns ke liye slot: 9:30 am - 11:00 am (shop 9 baje khulti hai). Chalega?", "time": "10:31 pm"}, {"who": "user", "text": "haan, 10 baje tak bhej do. Address: INA ke paas", "time": "10:31 pm"}, {"who": "bot", "text": "Order note ho gaya (demo):\n1 kg prawns, kal subah 10:00 am delivery.\nShop 9 baje khulte hi aapko rate aur final delivery charge confirm karke call/message aayega. Dhanyavaad!", "time": "10:31 pm"}, {"who": "sys", "text": "Owner ko subah 9 baje order ka alert milta hai. Example only: no real bot is connected."}]</script>
+</div></section>
+
+<section id="sell"><div class="wrap">
+  <h2>Kya milta hai</h2>
+  <p class="sub">Fresh seafood retail, plus frozen items. Stock aur rate roz badalte hain, isliye order se pehle call karke confirm karein.</p>
+  <div class="tiles"><div class="tile"><svg viewBox="0 0 64 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 20c8-12 24-12 34 0-10 12-26 12-34 0z"/><path d="M40 20l16-10v20z"/><circle cx="16" cy="18" r="1.6" fill="currentColor"/></svg><h3>Fish</h3><p>Taaza machhli, roz ki.</p></div><div class="tile"><svg viewBox="0 0 64 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 30c-6-4-6-16 6-20 12-4 24 2 28 12"/><path d="M46 22c4 2 6 6 4 10"/><path d="M12 30l-6 4M16 32l-4 5M20 33l-2 5"/><path d="M18 10l-8-6"/><circle cx="20" cy="15" r="1.4" fill="currentColor"/></svg><h3>Prawns</h3><p>Jhinga, size ke hisaab se.</p></div><div class="tile"><svg viewBox="0 0 64 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 34V16"/><ellipse cx="32" cy="22" rx="7" ry="10"/><path d="M26 10C18 6 14 12 18 16M38 10c8-4 12 2 8 6"/><path d="M25 22h-8M39 22h8M26 28l-6 4M38 28l6 4"/></svg><h3>Lobster</h3><p>Special occasion ke liye.</p></div><div class="tile"><svg viewBox="0 0 64 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="32" cy="24" rx="14" ry="9"/><path d="M18 20C10 18 8 10 14 8c4 0 4 6 2 8M46 20c8-2 10-10 4-12-4 0-4 6-2 8"/><path d="M20 30l-8 6M26 33l-4 5M44 30l8 6M38 33l4 5"/></svg><h3>Crab</h3><p>Kekda, taaza.</p></div><div class="tile"><svg viewBox="0 0 64 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 4c6 8 7 16 4 22H28C25 20 26 12 32 4z"/><path d="M24 26l-4 10M28 27v11M32 27v8M36 27v11M40 26l4 10"/></svg><h3>Squid</h3><p>Calamari ke liye.</p></div><div class="tile"><svg viewBox="0 0 64 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 4v32M16 12l32 16M48 12L16 28"/><path d="M28 6l4 4 4-4M28 34l4-4 4 4"/></svg><h3>Frozen</h3><p>Frozen kebabs aur sausages.</p></div></div>
+</div></section>
+
+<section id="delivery"><div class="wrap">
+  <h2>Phone order &amp; home delivery</h2>
+  <div class="grid c3">
+    <div class="card"><h3>Phone par order</h3><p>Call karein: 98913 07559. Batayein kya chahiye aur kitna.</p></div>
+    <div class="card"><h3>Home delivery</h3><p>Rs 150 per 2 km. Final charge aapke address ki doori par depend karta hai.</p></div>
+    <div class="card"><h3>Raat ko enquiry?</h3><p>Shop 9 PM par band hoti hai. Subah 9 AM se pehle ka message agle din confirm hota hai.</p></div>
+  </div>
+</div></section>
+
+<section id="rating"><div class="wrap">
+  <h2>Google rating</h2>
+  <div class="rate"><div class="big">4.1</div>
+    <div><div class="stars" role="img" aria-label="4.1 out of 5 stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z" fill="#f5b50a" stroke="#f5b50a" stroke-width="1.2"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z" fill="#f5b50a" stroke="#f5b50a" stroke-width="1.2"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z" fill="#f5b50a" stroke="#f5b50a" stroke-width="1.2"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z" fill="#f5b50a" stroke="#f5b50a" stroke-width="1.2"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 20.9l1.6-7L2 9.2l7.1-.6z" fill="none" stroke="#f5b50a" stroke-width="1.2"/></svg></div>
+    <p class="note" style="margin-top:6px">About 136 reviews on Google. Reviews ke asli shabd Google Maps par padhein.</p></div></div>
+  <div class="links"><a class="btn sm" href="https://www.google.com/maps/search/?api=1&amp;query=Samuel+Silver+Sea+Food%2C+Shop+203%2C+INA+Market%2C+Sri+Aurobindo+Marg%2C+New+Delhi" rel="noopener">Google Maps par dekhein</a></div>
+</div></section>
+
+<section id="visit"><div class="wrap visit">
+  <div>
+    <h2>Find us</h2>
+    <p class="addr">Shop 203, INA Market, Sri Aurobindo Marg, New Delhi</p>
+    <div class="links">
+      <a class="btn sm" href="https://www.google.com/maps/search/?api=1&amp;query=Samuel+Silver+Sea+Food%2C+Shop+203%2C+INA+Market%2C+Sri+Aurobindo+Marg%2C+New+Delhi" rel="noopener">Open in Google Maps</a>
+      <a class="btn sm" href="tel:+919891307559">Call 98913 07559</a>
+    </div>
+  </div>
+  <div>
+    <h2>Opening hours</h2>
+    <table><tr><td>Every day</td><td>9:00 AM - 9:00 PM</td></tr></table>
+  </div>
+</div>
+<div class="wrap"><iframe class="map" title="Map: Samuel Silver Sea Food, INA Market" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Samuel+Silver+Sea+Food%2C+Shop+203%2C+INA+Market%2C+Sri+Aurobindo+Marg%2C+New+Delhi&amp;output=embed"></iframe></div>
+</section>
+
+</main>
+
+<footer><div class="wrap">
+  <p><strong>Demo page prepared by [Your brand]</strong>. This is a sample and not an official page of the business.</p>
+  <p>Business details (address, hours, delivery charge, phone, Google rating) come from public listings. Any rate shown in the demo chat is a SAMPLE, not an actual price. The WhatsApp chat is a simulation; no bot is connected.</p>
+</div></footer>
+
+<div class="bar"><a class="btn wa" href="#night" data-demo>Order on WhatsApp</a></div>
+
+<script>
+(function(){
+  var log=document.getElementById('log'),btn=document.getElementById('play'),
+      data=JSON.parse(document.getElementById('demo-script').textContent),
+      reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches,
+      timers=[],started=false;
+  function add(m){var d=document.createElement('div');d.className='msg '+m.who;d.appendChild(document.createTextNode(m.text));
+    if(m.time){var s=document.createElement('small');s.textContent=m.time;d.appendChild(s);}log.appendChild(d);}
+  function dots(){var d=document.createElement('div');d.className='dots';d.id='dots';d.textContent='typing...';log.appendChild(d);}
+  function undots(){var d=document.getElementById('dots');if(d)d.remove();}
+  function play(){
+    timers.forEach(clearTimeout);timers=[];log.innerHTML='';btn.disabled=true;started=true;
+    var t=0;
+    data.forEach(function(m,i){
+      var gap=reduce?0:(m.who==='bot'?1500:900);
+      if(m.who==='bot'&&!reduce){timers.push(setTimeout(dots,t+300));}
+      t+=gap;
+      timers.push(setTimeout(function(){undots();add(m);if(i===data.length-1){btn.disabled=false;btn.textContent='Replay demo';}},t));
+    });
+  }
+  btn.addEventListener('click',play);
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(e,o){if(e[0].isIntersecting&&!started){play();o.disconnect();}},{threshold:.4}).observe(document.getElementById('chat'));
+  }
+})();
+</script>
+<script>
+(function(){
+  document.querySelectorAll('a[data-demo]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      var c=document.getElementById('chat'),b=document.getElementById('play');
+      if(c)c.scrollIntoView({behavior:'smooth',block:'center'});
+      if(b&&!b.disabled)setTimeout(function(){b.click();},350);
+    });
+  });
+})();
+</script>
+</body>
+</html>
