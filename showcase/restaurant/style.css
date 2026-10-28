@@ -134,7 +134,7 @@ em{font-style:italic;font-weight:400;color:var(--accent-text)}
 .hero{position:relative;min-height:min(100svh,52rem);display:flex;align-items:center;padding:7rem 0 5rem;overflow:hidden;
   background:radial-gradient(60% 55% at 78% 38%,rgba(232,98,44,.34),transparent 70%),radial-gradient(circle at 10% 100%,rgba(240,180,90,.14),transparent 55%),var(--bg)}
 .hero .container{position:relative;display:grid;gap:var(--s6);align-items:center}
-.hero h1{font-size:clamp(3rem,15.5vw,6.2rem);font-weight:600;line-height:.95;margin:var(--s4) 0 var(--s5);font-variation-settings:"opsz" 144,"SOFT" 50}
+.hero h1{font-size:clamp(3rem,13.6vw,6.2rem);font-weight:600;line-height:.95;margin:var(--s4) 0 var(--s5);font-variation-settings:"opsz" 144,"SOFT" 50}
 .hero h1 em{display:block}
 .hero p.lead{font-size:1.12rem;max-width:30rem;color:#d8cbb8}
 .hero .cta{display:flex;flex-wrap:wrap;gap:var(--s3);margin-top:var(--s6)}
