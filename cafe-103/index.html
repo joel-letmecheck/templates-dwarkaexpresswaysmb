@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cafe 103 | Preview</title>
+<meta name="description" content="Momos, pizza, rolls, grilled cheese, paneer and cold coffee.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#f5f6ef">
+<style>
+:root{--accent:#0f9d9a;--atext:#0c7e7b;--bg:#f5f6ef;--card:#ffffff;--fg:#1b1a18;--muted:#5c5852;--line:#e4ddd2;--wa:#25d366;--hero1:#0f9d9a;--hero2:#085655;--herotext:#ffffff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg);padding-bottom:84px}
+a{color:inherit}
+h1,h2,h3{line-height:1.15;margin:0}
+.wrap{max-width:760px;margin:0 auto;padding:0 18px}
+.top{position:sticky;top:0;z-index:20;background:rgba(245,246,239,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:56px}
+.brand{font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:999px;border:1px solid var(--line);text-decoration:none;font-weight:700;font-size:1rem;background:transparent;color:var(--fg);cursor:pointer;font-family:inherit}
+.btn.wa{background:var(--wa);border-color:var(--wa);color:#06260f}
+.btn.sm{min-height:38px;padding:0 14px;font-size:.88rem;white-space:nowrap}
+.btn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.hero{padding:44px 0 40px;background:radial-gradient(90% 70% at 100% 0%,rgba(255,255,255,.14),transparent 60%),linear-gradient(155deg,var(--hero1),var(--hero2));color:var(--herotext);position:relative;overflow:hidden}
+.hero .big{position:absolute;right:-8px;top:10px;font-size:7.5rem;opacity:.22;line-height:1;pointer-events:none}
+.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.76rem;opacity:.85;margin:0 0 12px}
+.hero h1{font-size:clamp(2rem,9vw,3.2rem);letter-spacing:-.01em;max-width:15ch;overflow-wrap:anywhere}
+.tag{margin:14px 0 0;font-size:1.08rem;max-width:34ch;opacity:.95}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 0;padding:0;list-style:none}
+.chips li{border:1px solid currentColor;border-color:rgba(255,255,255,.35);background:rgba(0,0,0,.18);border-radius:999px;padding:6px 14px;font-size:.88rem}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.hero .btn:not(.wa){color:var(--herotext);border-color:rgba(255,255,255,.55)}
+section{padding:36px 0;border-top:1px solid var(--line)}
+section h2{font-size:1.5rem;margin-bottom:8px;color:var(--atext)}
+.sub{color:var(--muted);margin:0 0 20px;max-width:60ch}
+.grid{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;border-top:3px solid var(--accent)}
+.card h3{font-size:1rem;margin-bottom:6px}
+.card p{margin:0;color:var(--muted);font-size:.93rem}
+.vibe p{margin:0 0 10px;max-width:60ch}
+.areachips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0 0 14px}
+.areachips li{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:8px 14px;font-weight:600}
+.diwali{background:linear-gradient(160deg,var(--card),var(--bg))}
+.lamp{font-size:1.4rem}
+form.book{display:grid;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;max-width:520px}
+form.book label{display:grid;gap:4px;font-size:.88rem;color:var(--muted);font-weight:600}
+form.book input,form.book select,form.book textarea{font:inherit;font-size:1rem;padding:11px 12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--fg);width:100%}
+form.book .row{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+.note{font-size:.82rem;color:var(--muted);margin:12px 0 0}
+table{border-collapse:collapse;width:100%;max-width:420px}
+td{padding:9px 0;border-bottom:1px solid var(--line)}
+td:last-child{text-align:right;color:var(--muted)}
+.addr{font-size:1.02rem;margin:0 0 14px}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+footer{padding:26px 0 34px;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem}
+footer p{margin:0 0 8px;overflow-wrap:anywhere}
+footer .made{font-size:.9rem;color:var(--fg);opacity:.8}
+footer a{text-decoration:underline}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(245,246,239,.94);border-top:1px solid var(--line)}
+.bar .btn{width:100%;max-width:520px;margin:0 auto;display:flex}
+@media(min-width:720px){.grid{grid-template-columns:repeat(4,1fr)}.hero{padding:80px 0 64px}.hero .big{font-size:11rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <span class="brand">Cafe 103</span>
+  <a class="btn wa sm" href="https://wa.me/919728555634?text=Hi%20Cafe%20103%2C%20I%20would%20like%20to%20place%20an%20order." rel="noopener">WhatsApp</a>
+</div></header>
+<main>
+<div class="hero"><div class="wrap">
+  <span class="big" aria-hidden="true">🥤</span>
+  <p class="eyebrow">Sector 103 · Dwarka Expressway</p>
+  <h1>Cafe 103</h1>
+  <p class="tag">Momos, pizza, rolls, grilled cheese, paneer and cold coffee.</p>
+  <ul class="chips"><li>Chinese · Fast food · Grill</li><li>4.8 on Google (178 ratings)</li></ul>
+  <div class="cta"><a class="btn wa" href="#book">Order on WhatsApp</a><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Cafe+103+SG-24%2C+Signum+103+Commercial+Complex%2C+Grand+Iva%2C+Signature+Global%2C+Sector+103%2C+Gurugram%2C+Haryana" rel="noopener">Get directions</a></div>
+</div></div>
+<section id="vibe"><div class="wrap vibe"><h2>Cuisine &amp; vibe</h2><p>A cafe at Signum 103 Commercial Complex in Sector 103.</p><p>Public listings mention momos, pizza, chicken rolls, grilled cheese, paneer, shakes and cold coffee.</p></div></section>
+<section id="highlights"><div class="wrap"><h2>Highlights</h2><p class="sub">Taken from public listings.</p><div class="grid"><div class="card"><h3>Momos</h3><p>Momos are one of the most-mentioned items.</p></div><div class="card"><h3>Pizza &amp; rolls</h3><p>Pizza and rolls are on the listed menu.</p></div><div class="card"><h3>Cold coffee &amp; shakes</h3><p>Cold coffee and shakes appear in public listings.</p></div><div class="card"><h3>Delivery</h3><p>Delivery is listed.</p></div></div></div></section>
+<section id="book" class="diwali"><div class="wrap"><h2><span class="lamp">🪔</span> Diwali &amp; party orders</h2><p class="sub">Dhanteras is on 6 Nov and Diwali on 8 Nov 2026. Planning a get-together at home? Send your order or a bigger party order on WhatsApp and the team can confirm timing.</p><form class="book" id="bk"><label>Your name<input name="n" autocomplete="name" required></label>
+<label>What would you like to order?<textarea name="o" rows="3" placeholder="Items, quantity, any Diwali party order" required></textarea></label>
+<div class="row"><label>Delivery or pickup<select name="d"><option>Delivery</option><option>Pickup</option></select></label>
+<label>Your area / society<input name="a" placeholder="e.g. Sector 108"></label></div><button class="btn wa" type="submit">Send order on WhatsApp</button></form><p class="note">Nothing is stored on this page. The form only prepares a WhatsApp message for you to send. The venue confirms availability.</p></div></section>
+<section id="visit"><div class="wrap"><h2>Find us</h2><p class="addr">SG-24, Signum 103 Commercial Complex, Grand Iva, Signature Global, Sector 103, Gurugram, Haryana</p><div class="links"><a class="btn sm" href="https://www.google.com/maps/search/?api=1&amp;query=Cafe+103+SG-24%2C+Signum+103+Commercial+Complex%2C+Grand+Iva%2C+Signature+Global%2C+Sector+103%2C+Gurugram%2C+Haryana" rel="noopener">Open in Google Maps</a><a class="btn sm" href="tel:+919728555634">Call +91 97285 55634</a><a class="btn sm" href="https://www.instagram.com/cafe103official" rel="noopener">Instagram</a></div><div style="margin-top:26px"><h2>Hours</h2><table><tr><td>Every day</td><td>11:00 AM – 11:00 PM</td></tr></table><p class="note">As listed on Restaurant Guru listing. Please confirm on WhatsApp, especially around Diwali.</p></div></div></section>
+</main>
+<footer><div class="wrap">
+  <p class="made">Preview made for Cafe 103 &middot; Free to keep</p>
+  <p>Details compiled from public listings (<a href="https://restaurant-guru.in/Cafe-103-Gurugram" rel="noopener">Restaurant Guru</a> · <a href="https://bharatbz.com/haryana/cafe-103-984134" rel="noopener">BharatBZ</a>). Ratings and timings were noted in Oct 2026 and may change. Not an official page of the business.</p>
+</div></footer>
+<div class="bar"><a class="btn wa" href="https://wa.me/919728555634?text=Hi%20Cafe%20103%2C%20I%20would%20like%20to%20place%20an%20order." rel="noopener">Order on WhatsApp</a></div>
+<script>
+function go(phone,msg){var u='https://wa.me/'+phone+'?text='+encodeURIComponent(msg);window.open(u,'_blank','noopener');}
+
+var f=document.getElementById('bk');f.addEventListener('submit',function(e){e.preventDefault();var v=f.elements;
+var m='Hi Cafe 103, I would like to place an order.\nName: '+v.n.value+'\nOrder: '+v.o.value+'\n'+v.d.value+(v.a.value?(' in '+v.a.value):'');go('919728555634',m);});</script>
+</body>
+</html>
